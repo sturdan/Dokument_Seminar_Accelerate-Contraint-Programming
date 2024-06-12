@@ -1,0 +1,38 @@
+% !TEX root = Seminararbeit.tex
+
+\clearpage
+\section*{\GetTranslation{honesty@title}}
+\GetTranslation{honesty@body}
+
+\vspace{2em}
+
+\ifdefined\AIUse
+    \expandafter\ifstrequal\expandafter{\AIUse}{No}{%
+        \GetTranslation{aiused@no}
+    }{%
+        \expandafter\ifstrequal\expandafter{\AIUse}{Content}{%
+            \GetTranslation{aiused@content}
+        }{%
+            \expandafter\ifstrequal\expandafter{\AIUse}{Support}{%
+                \GetTranslation{aiused@support}
+            }{% Fallback for undefined values
+                \GetTranslation{aiused@no}
+            }%
+        }%
+    }%
+\else
+    % Fallback, falls \useAI{} nie aufgerufen wurde
+    \GetTranslation{aiused@no}
+\fi
+
+\vspace{2em}
+\makeatletter
+Augsburg, \@date
+\par\vspace{1.5cm}
+(\@author)
+\makeatother
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "Seminararbeit"
+%%% End:

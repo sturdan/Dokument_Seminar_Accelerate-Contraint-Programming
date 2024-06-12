@@ -1,0 +1,89 @@
+\input{preamble}
+
+\begin{document}
+\pagenumbering{roman}	
+\include{titlepage}
+
+\tableofcontents
+
+\clearpage
+\pagenumbering{arabic}
+
+\section{Einleitung}
+\label{sec:Einleitung}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. \cite[993]{Konak2006} \cite[1--5]{Sailer2013}
+% Beim letzten Zitat die Seitenangabe "1--5" nicht durch "1 \psqq" ersetzen, da hierdurch die genaue Eingrenzung des Quellennachweises verloren geht.
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. \cite[995 \psq]{Konak2006}
+
+\section{Hauptteil}
+\label{sec:Hauptteil}
+
+Abbildungen können z.\,B. im Unterverzeichnis \texttt{figures} abgelegt werden.
+Eingebunden werden diese mit dem Befehl \texttt{\textbackslash includegraphics} innerhalb
+einer \texttt{figure}-Umgebung:
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/Hummingbird.jpg}
+  \caption{Eine Veilchenkopfelfe (auch Costakolibri genannt, vom lateinischen Calypte costae), die zur Familie der Kolibris gehört \cite{Kolibri}}
+  \label{fig:kolibri}
+\end{figure}
+
+\subsection{Erste Zwischenüberschrift}
+\label{sec:ErsteZwischenueberschrift}
+Die Arbeit kann auch Tabellen im \texttt{table}-Environment enthalten:
+\begin{table}[ht]
+  \centering
+  \caption{Entfernungstabelle Süddeutschland, vgl. \cite{entfernungstabelle}}
+  \begin{tabular}{c r r r}
+    \toprule
+              & Augsburg & München & Stuttgart \\
+    \midrule
+    Augsburg  & -        & 61      & 149       \\
+    München   & 61       & -       & 210       \\
+    Stuttgart & 149      & 210     & -         \\
+    \bottomrule
+  \end{tabular}
+  \label{tab:entfernungen}
+\end{table}
+
+\subsubsection{Erste Unterüberschrift}
+\label{sec:ErsteUnterueberschrift}
+
+Das \texttt{listings}-Paket erlaubt es, Quellcode mit Syntax-Highlighting einzubinden:
+
+\begin{lstlisting}[language=Python,float=ht,caption={Python-Programm zur Berechnung der Fakultätsfunktion},label=lst:factorial]
+def fact(n):
+    """Return the n-th factorial number"""
+    if n == 0:
+        return 1
+    else:
+        return n * fact(n-1)
+  
+# Test output
+print fact(10)
+print "Done"
+\end{lstlisting}
+
+In \Cref{lst:factorial} finden Sie eine rekursive Funktion zur Fakultätsberechnung.
+  
+\subsection{Zweite Zwischenüberschrift}
+\label{sec:ZweiteZwischenueberschrift}
+
+TEXT
+
+\section{Schluss}
+\label{sec:Schluss}
+
+TEXT
+
+% Literaturverzeichnis
+\printbibliography[heading=bibintoc]
+
+% Anhang
+\include{appendix}
+
+% Eidesstattliche Erklärung
+\include{honesty}
+
+\end{document}

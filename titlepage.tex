@@ -1,0 +1,41 @@
+\begin{titlepage}
+  \onehalfspacing
+  \makeatletter
+  \vspace*{1em}
+  \begin{center}
+    \ifdefempty{\@subject}{}{%
+      {\usekomafont{subject}\@subject}
+      \par\vspace{2em}
+    }
+    {\usekomafont{title}\@title}
+    \ifdefempty{\@subtitle}{}{%
+      \par\vspace{.5em}
+      {\usekomafont{subtitle}\@subtitle}
+    }
+    \par\vspace{2em}
+    \singlespacing
+    {\usekomafont{author}%
+      \@author\par
+      \GetTranslation{matrno}: \@matrno\par}
+    \texttt{\@email}
+    \par\vspace{1.5em}
+    {\usekomafont{publishers}\@publishers}
+  \end{center}
+  \makeatother
+
+  \begin{abstract}
+    \noindent%
+    \paragraph*{\abstractname}
+    \textcolor{red}{Bitte Dateien \texttt{settings.tex} und \texttt{titlepage.tex} anpassen.}
+    
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+  \end{abstract}
+
+  \vfill
+  \centering
+  \includegraphics[height=38mm]{figures/uni_siegel}
+\end{titlepage}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "Seminararbeit"
+%%% End:
