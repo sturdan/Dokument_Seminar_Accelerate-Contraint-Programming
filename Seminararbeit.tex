@@ -1,3 +1,5 @@
+% !TeX root = Seminararbeit.tex
+
 \input{preamble}
 
 \begin{document}
@@ -10,86 +12,104 @@
 \pagenumbering{arabic}
 
 
+\section{Einleitung: Verwendung von Constraint Programming}
+\label{sec:Einleitung: Verwendung von Constraint Programming}
+Constraint Programming spielt in einem weiten Bereich heutiger modernen
+Anwendungen eine große Rolle. Viele Probleme können durch Constraint Programming
+gelöst werden. Dazu gehören unter anderem: Vehicel Routing, Scheduling, Planung,
+Konfiguration, Ressourcenallokation und Kombinatorische Optimierung. Vehicel
+Routing ist in der heutighen Zeit für viele Unternehmen in der Logistikbranche
+und dem Flexiblen Transport von großer Bedeutung. \cite[1]{delec22jo}
 
+„Vehicle routing problems (VRP) [27] are of great importance for the
+distribution of goods in the supply chain. In order to cope with increasing
+urbanization and ecological challenges, it is also expected that flexible
+transport offers for people, such as on-demand transport, will have to be
+further developed in the future [12]. This raises new challenges for
+optimization, in particular the development of generic and reusable tools in
+many contexts and variants of VRP. Constraint Programming (CP) is one of the
+most flexible approaches for modeling vehicle routing problems (VRP).“
+\cite[text]{delec22jo}
 
-\section{Einleitung}
-\label{sec:Einleitung}
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. \cite[993]{Konak2006} \cite[1--5]{Sailer2013}
-% Beim letzten Zitat die Seitenangabe "1--5" nicht durch "1 \psqq" ersetzen, da hierdurch die genaue Eingrenzung des Quellennachweises verloren geht.
-
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. \cite[995 \psq]{Konak2006}
-
-
-
-
-\section{Hauptteil}
-\label{sec:Hauptteil}
-Abbildungen können z.\,B. im Unterverzeichnis \texttt{figures} abgelegt werden.
-Eingebunden werden diese mit dem Befehl \texttt{\textbackslash includegraphics} innerhalb
-einer \texttt{figure}-Umgebung:
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=0.8\textwidth]{figures/Hummingbird.jpg}
-  \caption{Eine Veilchenkopfelfe (auch Costakolibri genannt, vom lateinischen Calypte costae), die zur Familie der Kolibris gehört \cite{Kolibri}}
-  \label{fig:kolibri}
-\end{figure}
-
-
-
-\subsection{Erste Zwischenüberschrift}
-\label{sec:ErsteZwischenueberschrift}
-Die Arbeit kann auch Tabellen im \texttt{table}-Environment enthalten:
-\begin{table}[ht]
-  \centering
-  \caption{Entfernungstabelle Süddeutschland, vgl. \cite{entfernungstabelle}}
-  \begin{tabular}{c r r r}
-    \toprule
-              & Augsburg & München & Stuttgart \\
-    \midrule
-    Augsburg  & -        & 61      & 149       \\
-    München   & 61       & -       & 210       \\
-    Stuttgart & 149      & 210     & -         \\
-    \bottomrule
-  \end{tabular}
-  \label{tab:entfernungen}
-\end{table}
+„1.2 Applications of constraint programming 3 1.3 A very short history of the
+subject“ \cite[6]{aptjo}
 
 
 
-\subsubsection{Erste Unterüberschrift}
-\label{sec:ErsteUnterueberschrift}
 
-Das \texttt{listings}-Paket erlaubt es, Quellcode mit Syntax-Highlighting einzubinden:
 
-\begin{lstlisting}[language=Python,float=ht,caption={Python-Programm zur Berechnung der Fakultätsfunktion},label=lst:factorial]
-def fact(n):
-    """Return the n-th factorial number"""
-    if n == 0:
-        return 1
-    else:
-        return n * fact(n-1)
+„IBM ILOG CP Optimizer“ ([Delecluse et al., 2022, p.
+2](zotero://select/library/items/XDEYNPLK))
+([pdf](zotero://open-pdf/library/items/WMNAR4RS?page=2&annotation=RLZD4N5A)) IBM
+ILOG CP Optimizer (GLS ILOG)
+
+
+%chat gpt 13.06.2024
+Transport und Logistik: Zeitplanung und Ressourcenmanagement:
+Konfigurationsprobleme: Personaleinsatzplanung:
+
+\cite[1-5]{rossi06bo}
+
+\section{Grundlagen}
+\subsection{Constraint Satisfaction Problem und Constraint Optimization Problem} 
+\label{sec:Constraint Satisfaction Problem und Constraint Optimization Problem}
+
+
+
+\label{sec:Grundlagen}
+finite set of constraints \cite[1]{aptjo} constraint satisfaction problem
+\cite[1]{aptjo} (1) problem modeling (2) solve it - has solution - find solution
+- find optimal solution
+\cite*[postnote]{aptjo}
+
+
+\subsection{Constraint Optimization Problem}
+\label{sec: Constraint Optimization Problem}
+
+
+\subsection{Boolean Satisfibility problem}
+\label{sec: Boolean Satisfibility problem}
+
+
+\subsection{Mixed Ineger Problem}
+\label{sec: Mixed Ineger Problem}
+
+
+\section{Recent Approaches To Accelerate Constraint programms}
+\label{sec:Recent Approaches To Accelerate Constraint programms}
+
+
+\subsection{CP and Machine Learning}
+\label{sec:CP and Machine Learning}
+
   
-# Test output
-print fact(10)
-print "Done"
-\end{lstlisting}
+\subsection{Portfolio}
+\label{sec:Portfolio}
 
-In \Cref{lst:factorial} finden Sie eine rekursive Funktion zur Fakultätsberechnung.
   
+\subsection{Model Based Optization}
+\label{sec:Model Based Optization}
+
+  
+\subsection{Qunatum Acceleratedt}
+\label{sec:Qunatum Accelerated}
+
+  
+\subsection{Combine CP and SAT}
+\label{sec:Combine CP and SAT}
+
+  
+\subsection{Decompostion methods}
+\label{sec:Decompostion methods}
+
+  
+\subsection{Search Heuristics}
+\label{sec:Search Heuristics}
 
 
-\subsection{Zweite Zwischenüberschrift}
-\label{sec:ZweiteZwischenueberschrift}
+\section{Evaluation Performance Increase}
+\label{sec:Evaluation Performance Increase}
 
-TEXT
-
-
-
-
-\section{Schluss}
-\label{sec:Schluss}
-
-TEXT
 
 
 
