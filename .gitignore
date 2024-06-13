@@ -1,3 +1,6 @@
+##Ignore Symlinks
+*.symlink
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
