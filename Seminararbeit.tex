@@ -12,10 +12,27 @@
 
 \section{Einleitung: Verwendung von Constraint Programming}
 \label{sec:Einleitung: Verwendung von Constraint Programming}
-Constraint Programming spielt in einem weiten Bereichen heutiger modernen
+Constraint Programming (CP) spielt in einem weiten Bereichen heutiger modernen
 Anwendungen eine große Rolle zur Lösung von Problemen. Dazu gehören unter
 anderem: Vehicel Routing, Scheduling, Planung, Konfiguration,
-Ressourcenallokation und Kombinatorische Optimierung. Vehicel Routing ist in der
+Ressourcenallokation und Kombinatorische Optimierung. Neben dem Klassischen
+Problem der Kursplannung \cite{duboi96jo} in der immer schneller werden Zeit,
+gib es auch in der Industrie eine Vielzahl von Scheduling Problemen, wie der
+Zuweiung von Aufträgen zu Maschinen \cite{gedik16jo}. Auch wurden CP Ansätze für
+die Konfiguration von Netzwerken verwendet \cite{ardisjo}. Ein weit Verbreitetes
+Kombinatirsches Optimierungsproblem ist das 3-SAT Problem. Es beschreibt die
+Frage ob eine Formel in konjunktiver Normalform (KNF) mit Klauseln aus jeweil 3
+Literalen erfüllbar ist.  
+%\cite{keylist} 
+Beispielsweise löst
+$x_1=\mathrm{false},x_2=\mathrm{false},x_3=\mathrm{false},x_4=\mathrm{false}$
+das folgende 3-SAT Problem: $(\lnot x_1\lor x_2\lor x_3)\land(x_1\lor\lnot
+x_2\lor x_4)\land(x_2\lor x_3\lor\lnot x_4)$
+
+Unter dem selben Namen wird Jährlich die MiniZinc Challenge ausgetragen, in der
+ein Parkour von Constraint Modelen gelöst werden muss. Am Ende werden die Solver
+nach Anzahl der gelösten Modelle, der Zeit und der Qualität der Lösung bewertet.
+%\cite{keylist} Vehicel Routing ist in der
 heutighen Zeit für viele Unternehmen in der Logistikbranche und dem Flexiblen
 Transport von großer Bedeutung. \cite[1]{delec22jo}. Je nach Anwendungen und
 Problemstellung können unterschiedliche Constraint Programming Ansätze verwendet
@@ -72,14 +89,15 @@ $(\lnot x_1\lor x_2\lor x_3)\land(x_1\lor\lnot x_2\lor x_4)\land(x_2\lor x_3\lor
 
 Unter dem selben Namen wird Jährlich die MiniZinc Challenge ausgetragen, in der
 ein Parkour von Constraint Modelen gelöst werden muss. Am Ende werden die Solver
-nach Anzahl der gelösten Modelle, der Zeit und der Qualität der Lösung bewertet. \cite{keylist}
+nach Anzahl der gelösten Modelle, der Zeit und der Qualität der Lösung bewertet.
+%\cite{keylist}
 
 \subsection{Boolean Satisfibility problem}
 \label{sec: Boolean Satisfibility problem}
 
 
-\subsection{Mixed Ineger Problem}
-\label{sec: Mixed Ineger Problem}
+\subsection{Mixed Integer Problem}
+\label{sec: Mixed Integer Problem}
 
 
 \section{Recent Approaches To Accelerate Constraint programms}
