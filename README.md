@@ -1,3 +1,9 @@
+# Install
+
+1. Copy literatur.bib from Zotero to this folder
+
+
+
 # Template für Seminararbeiten
 
 ## Nötige Anpassungen

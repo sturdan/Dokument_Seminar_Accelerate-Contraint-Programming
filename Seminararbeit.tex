@@ -11,11 +11,15 @@
 
 
 \section{Einleitung: Verwendung von Constraint Programming}
-\label{sec:Einleitung: Verwendung von Constraint Programming}
+\label{sec:Einleitung-Verwendung-von-Constraint-Programming}
 Constraint Programming (CP) spielt in einem weiten Bereichen heutiger modernen
-Anwendungen eine große Rolle zur Lösung von Problemen. Dazu gehören unter
-anderem: Vehicel Routing, Scheduling, Planung, Konfiguration,
-Ressourcenallokation und Kombinatorische Optimierung. Neben dem Klassischen
+Anwendungen eine große Rolle in welchen Optimierungsproblemen mit
+Nebenbedingungen gelöst werden müssen. Anwenungen hierzu sind unter anderem:
+Vehicel Routing, Scheduling, Planung, Konfiguration, Ressourcenallokation und
+Kombinatorische Optimierung. Auch findet jährlich die  Conference on Principles
+and Practice of Constraint Programming statt, in welcher aktuelle
+Forschungsergebnisse im Bereich CP diskutiert werden, wodurch die Wichtigkeit
+des Themenfeldes unterstrichen wird. \cite{CP20we}. Neben dem Klassischen
 Problem der Kursplannung \cite{duboi96jo} in der immer schneller werden Zeit,
 gib es auch in der Industrie eine Vielzahl von Scheduling Problemen, wie der
 Zuweiung von Aufträgen zu Maschinen \cite{gedik16jo}. Auch wurden CP Ansätze für
@@ -25,73 +29,129 @@ Frage ob eine Formel in konjunktiver Normalform (KNF) mit Klauseln aus jeweil 3
 Literalen erfüllbar ist.
 \cite[271]{rossi06bo} 
 Beispielsweise löst
-$$x_1=\mathrm{false},x_2=\mathrm{false},x_3=\mathrm{false},x_4=\mathrm{false}$$
-das folgende 3-SAT Problem: 
-$$(\lnot x_1\lor x_2\lor x_3)\land(x_1\lor\lnot x_2\lor x_4)\land(x_2\lor x_3\lor\lnot x_4)$$
 
-Vehicel Routing ist in der
-heutighen Zeit für viele Unternehmen in der Logistikbranche und dem Flexiblen
-Transport von großer Bedeutung. \cite[1]{delec22jo}. Je nach Anwendungen und
-Problemstellung können unterschiedliche Constraint Programming Ansätze verwendet
-werden. Es exisiteren diveres Toolboxen um Contraint Programming Problem zu
-Lösen. Für das Vehicel Routing Problem, welches das Problem beschreibt für n
-Fahrzeuge und m Orte den kürzesten gesamt Weg zu finden \cite[222]{labor18jo},
-kann beispielseise der IBM ILOG CP Optimzer verwendet werden.\cite{IBMIwe} Je
-nach Problemstellung gibe es eine Viehlzahl von weitern Toolboxen
-\cite{Solviwea}, Or-tools von Google ist eine weitere zum lösen von Constraint
-Programming (CP), Linear Programming (LP), Integer Programming (IP) und Boolean
-Satisfiability (SAT) Problemen. \cite{ORToowe}, Geocode ist eine Open Source
-Variante basierend auf C++ \cite{GECODwe} und Chuffed is eine Varainte welche
-"lazy clause generation" ausnutzt um CP Probleme schneller zu lösen
-\cite{Chuff24co}. MiniZinc vereint unter anderem die im Vorherigen beschriebenen
-Softwarebibliotheken zu einer Ausdrucksspache zum Lösen von einer Vielzahl von LP, Transportprobleme (TP) und SAT Problemen.
-\cite{MiniZwe}. Unter dem selben Namen wird Jährlich die MiniZinc Challenge ausgetragen, in der
-ein Parkour von Constraint Modelen gelöst werden muss. Am Ende werden die Solver
-nach Anzahl der gelösten Modelle, der Zeit und der Qualität der Lösung bewertet.
-\cite{Homewe}
+$$x_1=\mathrm{false},x_2=\mathrm{false},x_3=\mathrm{false},x_4=\mathrm{false}$$
+
+das folgende 3-SAT Problem:
+
+$$(\lnot x_1\lor x_2\lor x_3)\land(x_1\lor\lnot x_2\lor x_4)\land(x_2\lor
+x_3\lor\lnot x_4)$$
+
+Besonders Vehicel Routing ist in der heutighen Zeit für viele Unternehmen in der
+Logistikbranche und dem Flexiblen Transport von großer Bedeutung.
+\cite[1]{delec22jo}. Je nach Anwendungen und Problemstellung können
+unterschiedliche Constraint Programming Ansätze verwendet werden. Es exisiteren
+diveres Toolboxen um Contraint Programming Problem zu Lösen. Für das Vehicel
+Routing Problem, welches das Problem beschreibt für n Fahrzeuge und m Orte den
+kürzesten gesamt Weg zu finden \cite[222]{labor18jo}, kann beispielseise der IBM
+ILOG CP Optimzer verwendet werden.\cite{IBMIwe} Je nach Problemstellung gibe es
+eine Viehlzahl von weitern Toolboxen \cite{Solviwea}, Or-tools von Google ist
+eine weitere zum lösen von Constraint Programming (CP), Linear Programming (LP),
+Integer Programming (IP) und Boolean Satisfiability (SAT) Problemen.
+\cite{ORToowe}, Geocode ist eine Open Source Variante basierend auf C++
+\cite{GECODwe} und Chuffed is eine Varainte welche "lazy clause generation"
+ausnutzt um CP Probleme schneller zu lösen \cite{Chuff24co}. MiniZinc vereint
+unter anderem die im Vorherigen beschriebenen Softwarebibliotheken zu einer
+Ausdrucksspache zum Lösen von einer Vielzahl von LP, Transportprobleme (TP) und
+SAT Problemen. \cite{MiniZwe}. Unter dem selben Namen wird Jährlich die MiniZinc
+Challenge ausgetragen, in der ein Parkour von Constraint Modelen gelöst werden
+muss. Am Ende werden die Solver nach Anzahl der gelösten Modelle, der Zeit und
+der Qualität der Lösung bewertet. \cite{Homewe}. Gerade bei großen
+Problemstellungen oder wenn beispielweise in der Forschung oft üblich, mehrere
+Lösung oder Besondere Ansprüche an die Qualität und Genauigkeit der Lösung
+gestellt werden kann die Ausführung oft lange dauern, weshalb die benötigte Zeit
+der Solver von großer Bedeutung ist. Die folgende Arbeit soll hierzu aktuelle
+Ansätze vorstellen mit denen CP Problme schneller gelöst werden können. 
 
 %\cite{keylist}
 
 \section{Grundlagen}
-\subsection{Constraint Satisfaction Problem und Constraint Optimization Problem} 
-\label{sec:Constraint Satisfaction Problem und Constraint Optimization Problem}
+\label{sec:Grundlagen}
+Grundlegend gibt es zwei Arten von Constraint Problemen, Constraint Satisfaction
+Probleme (CSP) und Constraint Optimization Problem (COP). Ein CSP beschreibt im
+wesentlichen ein Problem, bei dem Nebenbedingungen festlegen welche Werte die
+Variablen annehmen können. \cite[13]{rossi06bo} Ziel hierbei kann es entweder
+sein zu überprüfen ob eine Lösung existiert, eine mögliche Lösung zu finden oder
+die Menge aller möglichen Lösungen zu bestimmen. Ein COP ist eine Erweiterung
+des CSP, bei dem zusätzlich eine Zielfunktion minimiert werden müssen.
+\cite[171]{rossi06bo}. Ebeso kann es hierbei auch darum gehen zu überprüfen ob
+das Problem überhaupt lösbar ist, eine mögliche Lösung zu finden oder die
+optimale Lösung zu finden.
 
-finite set of constraints \cite[1]{aptjo} constraint satisfaction problem
-\cite[1]{aptjo} (1) problem modeling (2) solve it - has solution - find solution
-- find optimal solution
-\cite*[postnote]{aptjo}
-Constraint Programming (CP), Mixed Integer Linear Programming (MIP) or Boolean
-Satisfiability (SAT) solvers
 
+\subsection{Constraint Satisfaction Probleme}
+\label{sec: Constraint Satisfaction Probleme}
+Ein CSP lässt sich durch ein Tripel $P=(X,D,C)$ beschreiben, wobei $X=\langle
+x_{1},x_{2},\ldots,x_{n}\rangle$  ein n-Tupel von Variablen, $D=\langle
+D_{1},D_{2},\ldots,D_{n}\rangle$ ein n-Tupel von Domänen, so dass , so dass
+$x_i\in D_{i}$ erfüllt ist und $C=\langle C_1,C_2,\ldots,C_t\rangle$ eine Menge
+von Bedingungen beschreibt. Jede Bedindingung $C_j$ ist hierbei eine Untermenge
+des Cartesischen Produkts über $D$. Eine Lösung für ein CSP ist ein n-Tupel
+$A=\langle a_1,a_2,\ldots,a_n\rangle $ so dass $a_i\in D_i$ für alle $i$ und $A
+\in C_j \quad \forall j$ \todo{revisit Formula}. \cite[16]{rossi06bo} Ein
+Beispiel für ein CSP ist das oben beschriebene 3-SAT Problem. Das lösen eines
+3-SAT Problems ist NP-Vollständig, was bedeutet das es keine effiziente
+Algorithmus gibt, der das Problem in Polynomialzeit lösen kann.
+\cite[17]{rossi06bo}. Eine einfache Möglichkeint ein CSP zu lösen ist die
+Verwendung von Backtracking. Hierbei wird eine Variable nach der anderen belegt
+und bei einem Widerspruch wird ein Schritt zurückgegangen und eine andere
+Variable belegt. \cite[21]{rossi06bo} Interessant ist auch, dass  sich auch alle
+k>3-SAT Probleme auf ein 3-SAT Problem reduzieren lassen wodurch auch das k>3
+SAT Problem NP-Vollständig ist. \cite[206]{gritz13bo} Snd die Domänen der
+Variablen auf boolesche Werte beschränkt handelt es sich um ein Boolean
+Satisfiability  Problem (SAT).
 
 
 \subsection{Constraint Optimization Problem}
 \label{sec: Constraint Optimization Problem}
+Viele Probleme in der echten Welt Welt suchen nicht nur eine Lösung, sondern die
+optimale Lösung. Solche Probleme lassen sich durch ein Constraint Optimization
+Problem modellieren. Hierzu wird die Problemstellung um eine Zielfunktion
+erweitert die minimiert oder maximiert werden soll. Ein COP lässt sich durch ein
+Tripel $P=(X,D,C,f)$ beschreiben, wobei die ersten drei Elemente wie bei einem
+CSP sind und $f$ eine Zielfunktion ist. \cite[22]{amadi15jo}. In der Physik oder
+den Ingenieurwissenschaften ist werden COP auch oft in Funktionsdarstellung
+beschrieben.
+\begin{align*}
+    &\text{minimize:} \quad f(x) \\
+    &\text{subject to:} \\
+    &\quad g_j(x) \leq 0 \\
+    &\quad h_l(x) = 0 \\
+    &\quad \underline{x_i} \leq x_i \leq \overline{x_i}
+\end{align*}
+Hierbei beschreibt $g_j(x)$ und $h_l(x)$ die Nebenbedingungen $C$, wobei
+ersteres eine Ungleichungsrestriktionen und letzteres eine Gleichungsrestriktion
+darstellt. Die letzte Gleichung beschreibt die Domäne $D$ der Variablen.
+\cite[154]{marti21bo}. Je nach Art der Probemstellung unterscheiden sich die
+verwendeten Algorithmen. Sind beispielseise die Nebenbedingungen und die
+Zielfunktion linear handelt es sich um ein Linear Programming Problem (LP).
+Dieses lässt sich beispielseise mit dem Simplex Algorithmus lösen. Das Verfahren
+beruht darauf dass die Nebenbedingungen einen n-dimensionalen Polyeder
+aufspannen und die optimale Lösung auf einer Ecken des Polyeders liegt. Der
+Simplex Algorithmus sucht nun nun nacheinander die Ecken ab bis die optimale
+Lösung gefunden wurde. Beschränkt man sich bei den Lösungen auf ganzzahlige
+Werte Spricht man von einem Integer Programming Problem (IP). Diese lassen sich 
+mit dem Branch-and-Bound Algorithmus lösen. \cite{dakin65jo}
+\cite[99]{hofst07bo}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/Simplex.PNG}
+    \caption{Polyeder beschreibt Nebenbedingungen, Gestrichelte Linie die
+    Zielfunktion,  Ecken sind mögliche Lösungen \cite[100]{hofst07bo}}
+    \label{fig:bild}
+\end{figure}
+Oft lassen sich Probleme jedoch nur über nichtlineare Zusammenhänge beschreiben.
+Eine Möglichkeit solche Probleme zu lösen ist die Verwendung von
+Gradientenverfahren. \cite[153]{marti21bo}. Ein Problem bei der Verwendung von
+diesen ist jedoch, dass sie je nach Initialisierung oft nur lokale Minima
+finden. \cite[9]{boyd04bo}. Ein Ansatz um dieses Problem zu umgehen ist die
+Verwendung von konvexen Funktionen. Dabei wird die nichtlineare Funktion durch
+eine konkave Zielfunktion approximiert. \cite[11]{boyd04bo} Dies ist von
+Vorteil, da konvexe Funktionen nur ein lokales Minimum haben.
+\cite[7]{noced06bo}. Durch die einfachere Lösbarkeit von konvexen
+optimierungsproblemen, spielen Sie auch in der Literatur eine wichtig Rolle.
+\cite[8]{boyd04bo}. 
 
-Neben dem Klassischen Problem der Kursplannung \cite{duboi96jo} in der immer
-schneller werden Zeit, gib es auch in der Industrie eine Vielzahl von Scheduling
-Problemen, wie der Zuweiung von Aufträgen zu Maschinen \cite{gedik16jo}. Auch
-wurden CP Ansätze für die Konfiguration von Netwerken verwendet \cite{ardisjo}.
-Ein weit Verbreitetes Kombinatirsches Optimierungsproblem ist das 3-SAT Problem.
-Es beschreibt die Frage ob eine Formel in konjunktiver Normalform (KNF) mit
-Klauseln aus jeweil 3 Literalen erfüllbar ist.  
-%\cite{keylist} 
-Beispielsweise löst 
-$x_1=\mathrm{false},x_2=\mathrm{false},x_3=\mathrm{false},x_4=\mathrm{false}$
-das folgende 3-SAT Problem: 
-$(\lnot x_1\lor x_2\lor x_3)\land(x_1\lor\lnot x_2\lor x_4)\land(x_2\lor x_3\lor\lnot x_4)$
-
-Unter dem selben Namen wird Jährlich die MiniZinc Challenge ausgetragen, in der
-ein Parkour von Constraint Modelen gelöst werden muss. Am Ende werden die Solver
-nach Anzahl der gelösten Modelle, der Zeit und der Qualität der Lösung bewertet.
-%\cite{keylist}
-
-\subsection{Boolean Satisfibility problem}
-\label{sec: Boolean Satisfibility problem}
-
-
-\subsection{Mixed Integer Problem}
-\label{sec: Mixed Integer Problem}
 
 
 \section{Recent Approaches To Accelerate Constraint programms}
@@ -128,12 +188,6 @@ nach Anzahl der gelösten Modelle, der Zeit und der Qualität der Lösung bewert
 
 \section{Evaluation Performance Increase}
 \label{sec:Evaluation Performance Increase}
-
-MiniZinc vereint unter anderem die im vorherigen beschrieb
-Softwarebibliotheken zu einer Ausdrucksspache zum Lösen von einer Viehlzahl von 
-LP, Tp und SAT Problemen. \cite{MiniZwe}
-
-
 
 
 % Literaturverzeichnis
