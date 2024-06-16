@@ -1,0 +1,1159 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{CP20we}{online}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{{{CP}} 2024}
+      \field{urlday}{14}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb ..\..\Zotero\storage\6I4B34CS\cp2024.a4cp.org.html
+      \endverb
+      \verb{urlraw}
+      \verb https://cp2024.a4cp.org/
+      \endverb
+      \verb{url}
+      \verb https://cp2024.a4cp.org/
+      \endverb
+      \keyw{Constraint Programming}
+    \endentry
+    \entry{duboi96jo}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=0b9fac725102ee602ca938500ffa91d0}{%
+           family={Dubois},
+           familyi={D\bibinitperiod},
+           given={Didier},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{0b9fac725102ee602ca938500ffa91d0}
+      \strng{fullhash}{0b9fac725102ee602ca938500ffa91d0}
+      \strng{fullhashraw}{0b9fac725102ee602ca938500ffa91d0}
+      \strng{bibnamehash}{0b9fac725102ee602ca938500ffa91d0}
+      \strng{authorbibnamehash}{0b9fac725102ee602ca938500ffa91d0}
+      \strng{authornamehash}{0b9fac725102ee602ca938500ffa91d0}
+      \strng{authorfullhash}{0b9fac725102ee602ca938500ffa91d0}
+      \strng{authorfullhashraw}{0b9fac725102ee602ca938500ffa91d0}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{In classical Constraint Satisfaction Problems (CSPs) knowledge is embedded in a set of hard constraints, each one restricting the possible values of a set of variables. However constraints in real world problems are seldom hard, and CSP’s are often idealizations that do not account for the preference among feasible solutions. Moreover some constraints may have priority over others. Lastly, constraints may involve uncertain parameters. This paper advocates the use of fuzzy sets and possibility theory as a realistic approach for the representation of these three aspects. Fuzzy constraints encompass both preference relations among possible instantiations and priorities among constraints. In a Fuzzy Constraint Satisfaction Problem (FCSP), a constraint is satisfied to a degree (rather than satisfied or not satisfied) and the acceptability of a potential solution becomes a gradual notion. Even if the FCSP is partially inconsistent, best instantiations are provided owing to the relaxation of some constraints. Fuzzy constraints are thus flexible. CSP notions of consistency and k-consistency can be extended to this framework and the classical algorithms used in CSP resolution (e.g., tree search and filtering) can be adapted without losing much of their efficiency. Most classical theoretical results remain applicable to FCSPs. In the paper, various types of constraints are modelled in the same framework. The handling of uncertain parameters is carried out in the same setting because possibility theory can account for both preference and uncertainty. The presence of uncertain parameters leads to ill-defined CSPs, where the set of constraints which defines the problem is not precisely known.}
+      \field{issn}{0924-669X, 1573-7497}
+      \field{journaltitle}{Applied Intelligence}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{number}{4}
+      \field{shortjournal}{Appl Intell}
+      \field{shorttitle}{Possibility Theory in Constraint Satisfaction Problems}
+      \field{title}{Possibility Theory in Constraint Satisfaction Problems: {{Handling}} Priority, Preference and Uncertainty}
+      \field{urlday}{14}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{volume}{6}
+      \field{year}{1996}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{287\bibrangedash 309}
+      \range{pages}{23}
+      \verb{doi}
+      \verb 10.1007/BF00132735
+      \endverb
+      \verb{file}
+      \verb ..\..\Zotero\storage\JXW29FTY\Dubois et al. - 1996 - Possibility theory in constraint satisfaction prob.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/BF00132735
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/BF00132735
+      \endverb
+      \keyw{Constraint Programming}
+    \endentry
+    \entry{gedik16jo}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=c6da820fe39fa8cdee877ac2e148d59f}{%
+           family={Gedik},
+           familyi={G\bibinitperiod},
+           given={Ridvan},
+           giveni={R\bibinitperiod}}}%
+        {{hash=93bb164d48e06355af1c5df0487768e5}{%
+           family={Rainwater},
+           familyi={R\bibinitperiod},
+           given={Chase},
+           giveni={C\bibinitperiod}}}%
+        {{hash=b21e882e5e7d90c29593c9182e4e5661}{%
+           family={Nachtmann},
+           familyi={N\bibinitperiod},
+           given={Heather},
+           giveni={H\bibinitperiod}}}%
+        {{hash=5a55dc4f154b2828f91f62f964e1873f}{%
+           family={Pohl},
+           familyi={P\bibinitperiod},
+           given={Ed\bibnamedelima A.},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{4d9cb944e4c0c16865d758ed46a83dcc}
+      \strng{fullhash}{b07a296bee46cc11c47a9d25eeb2f891}
+      \strng{fullhashraw}{b07a296bee46cc11c47a9d25eeb2f891}
+      \strng{bibnamehash}{4d9cb944e4c0c16865d758ed46a83dcc}
+      \strng{authorbibnamehash}{4d9cb944e4c0c16865d758ed46a83dcc}
+      \strng{authornamehash}{4d9cb944e4c0c16865d758ed46a83dcc}
+      \strng{authorfullhash}{b07a296bee46cc11c47a9d25eeb2f891}
+      \strng{authorfullhashraw}{b07a296bee46cc11c47a9d25eeb2f891}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this study, we propose constraint programming (CP) model and logic-based Benders algorithms in order to make the best decisions for scheduling non-identical jobs with availability intervals and sequence dependent setup times on unrelated parallel machines in a fixed planning horizon. In this problem, each job has a profit, cost and must be assigned to at most one machine in such a way that total profit is maximized. In addition, the total cost has to be less than or equal to a budget level. Computational tests are performed on a real-life case study prepared in collaboration with the U.S. Army Corps of Engineers (USACE). Our initial investigations show that the pure CP model is very efficient in obtaining good quality feasible solutions but, fails to report the optimal solution for the majority of the problem instances. On the other hand, the two logic-based Benders decomposition algorithms are able to obtain near optimal solutions for 86 instances out of 90 examinees. For the remaining instances, they provide a feasible solution. Further investigations show the high quality of the solutions obtained by the pure CP model.}
+      \field{issn}{03772217}
+      \field{journaltitle}{European Journal of Operational Research}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{number}{2}
+      \field{shortjournal}{European Journal of Operational Research}
+      \field{title}{Analysis of a Parallel Machine Scheduling Problem with Sequence Dependent Setup Times and Job Availability Intervals}
+      \field{urlday}{14}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{volume}{251}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{640\bibrangedash 650}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1016/j.ejor.2015.11.020
+      \endverb
+      \verb{file}
+      \verb ..\..\Zotero\storage\LLAD6LK7\Gedik et al. - 2016 - Analysis of a parallel machine scheduling problem .pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0377221715010693
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0377221715010693
+      \endverb
+      \keyw{Constraint Programming}
+    \endentry
+    \entry{ardisjo}{article}{}{}
+      \name{author}{8}{}{%
+        {{hash=4d897d29e24fae0c59ebc8e24290801a}{%
+           family={Ardissono},
+           familyi={A\bibinitperiod},
+           given={Liliana},
+           giveni={L\bibinitperiod}}}%
+        {{hash=81655836ef41c3264e367ccbbd394701}{%
+           family={Felfernig},
+           familyi={F\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8c14fa59a9c511fd1b3a0c36b8d30d17}{%
+           family={Friedrich},
+           familyi={F\bibinitperiod},
+           given={Gerhard},
+           giveni={G\bibinitperiod}}}%
+        {{hash=e6c0b373a5d21238a20b2c7fea216e36}{%
+           family={Goy},
+           familyi={G\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8044b9528a8ea937291cf64035350877}{%
+           family={Jannach},
+           familyi={J\bibinitperiod},
+           given={Dietmar},
+           giveni={D\bibinitperiod}}}%
+        {{hash=ead1e76f80d70cd80937c0c68e676b0a}{%
+           family={Petrone},
+           familyi={P\bibinitperiod},
+           given={Giovanna},
+           giveni={G\bibinitperiod}}}%
+        {{hash=faa8be8f38837f36d2e14e3e9b3dccb7}{%
+           family={Schäfer},
+           familyi={S\bibinitperiod},
+           given={Ralph},
+           giveni={R\bibinitperiod}}}%
+        {{hash=cb922243615d2e342d795021fe955909}{%
+           family={Zanker},
+           familyi={Z\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{a709aa42c9c2241b452b16d5db34da86}
+      \strng{fullhash}{219ec5e4ada7c67658ae3647c639861b}
+      \strng{fullhashraw}{219ec5e4ada7c67658ae3647c639861b}
+      \strng{bibnamehash}{a709aa42c9c2241b452b16d5db34da86}
+      \strng{authorbibnamehash}{a709aa42c9c2241b452b16d5db34da86}
+      \strng{authornamehash}{a709aa42c9c2241b452b16d5db34da86}
+      \strng{authorfullhash}{219ec5e4ada7c67658ae3647c639861b}
+      \strng{authorfullhashraw}{219ec5e4ada7c67658ae3647c639861b}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{A {{Framework}} for the {{Development}} of {{Personalized}}, {{Distributed Web-Based Configuration Systems}}}
+      \verb{file}
+      \verb ..\..\Zotero\storage\2QT3EU67\Ardissono et al. - A Framework for the Development of Personalized, D.pdf
+      \endverb
+      \keyw{Constraint Programming}
+    \endentry
+    \entry{rossi06bo}{book}{}{}
+      \name{editor}{3}{}{%
+        {{hash=ed2fcdb25982e0ec1a0fa6af1490b33a}{%
+           family={Rossi},
+           familyi={R\bibinitperiod},
+           given={Francesca},
+           giveni={F\bibinitperiod}}}%
+        {{hash=1901dd453a5fb788a67061e92a2edbf2}{%
+           family={Van\bibnamedelima Beek},
+           familyi={V\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=0083caa546c0b2a86576a95dbef046a9}{%
+           family={Walsh},
+           familyi={W\bibinitperiod},
+           given={Toby},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Amsterdam ; Boston}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{8c446ca796aa3eda5675849d93fad989}
+      \strng{fullhash}{8c446ca796aa3eda5675849d93fad989}
+      \strng{fullhashraw}{8c446ca796aa3eda5675849d93fad989}
+      \strng{bibnamehash}{8c446ca796aa3eda5675849d93fad989}
+      \strng{editorbibnamehash}{8c446ca796aa3eda5675849d93fad989}
+      \strng{editornamehash}{8c446ca796aa3eda5675849d93fad989}
+      \strng{editorfullhash}{8c446ca796aa3eda5675849d93fad989}
+      \strng{editorfullhashraw}{8c446ca796aa3eda5675849d93fad989}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{annotation}{OCLC: ocm70408044}
+      \field{edition}{1st ed}
+      \field{isbn}{978-0-444-52726-4}
+      \field{langid}{english}
+      \field{pagetotal}{955}
+      \field{series}{Foundations of Artificial Intelligence}
+      \field{title}{Handbook of Constraint Programming}
+      \field{year}{2006}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb Buch\Rossi et al - 2006 - Handbook of constraint programming.pdf
+      \endverb
+      \keyw{Constraint Programming,Vehicle Routing}
+    \endentry
+    \entry{delec22jo}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=b469feeccea90938df2ed219b5c2760e}{%
+           family={Delecluse},
+           familyi={D\bibinitperiod},
+           given={Augustin},
+           giveni={A\bibinitperiod}}}%
+        {{hash=04b25dbc630118068c55c54cd179207d}{%
+           family={Schaus},
+           familyi={S\bibinitperiod},
+           given={Pierre},
+           giveni={P\bibinitperiod}}}%
+        {{hash=5eeaeba3570cdd92adbf5061b503d45e}{%
+           family={Van\bibnamedelima Hentenryck},
+           familyi={V\bibinitperiod\bibinitdelim H\bibinitperiod},
+           given={Pascal},
+           giveni={P\bibinitperiod}}}%
+      }
+      \name{namea}{1}{}{%
+        {{hash=06801325150e7eb386e08c097fbbe0da}{%
+           family={Solnon},
+           familyi={S\bibinitperiod},
+           given={Christine},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Schloss Dagstuhl – Leibniz-Zentrum für Informatik}%
+      }
+      \strng{namehash}{ca40a19dffd605a911c5d4a1311f79af}
+      \strng{fullhash}{ca40a19dffd605a911c5d4a1311f79af}
+      \strng{fullhashraw}{ca40a19dffd605a911c5d4a1311f79af}
+      \strng{bibnamehash}{ca40a19dffd605a911c5d4a1311f79af}
+      \strng{authorbibnamehash}{ca40a19dffd605a911c5d4a1311f79af}
+      \strng{authornamehash}{ca40a19dffd605a911c5d4a1311f79af}
+      \strng{authorfullhash}{ca40a19dffd605a911c5d4a1311f79af}
+      \strng{authorfullhashraw}{ca40a19dffd605a911c5d4a1311f79af}
+      \strng{nameabibnamehash}{06801325150e7eb386e08c097fbbe0da}
+      \strng{nameanamehash}{06801325150e7eb386e08c097fbbe0da}
+      \strng{nameafullhash}{06801325150e7eb386e08c097fbbe0da}
+      \strng{nameafullhashraw}{06801325150e7eb386e08c097fbbe0da}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Constraint Programming (CP) is one of the most flexible approaches for modeling and solving vehicle routing problems (VRP). This paper proposes the sequence variable domain, that is inspired by the insertion graph introduced in [Bent and Van Hentenryck, 2004] and the subset bound domain for set variables. This domain representation, which targets VRP applications, allows for an efficient insertion-based search on a partial tour and the implementation of simple, yet efficient filtering algorithms for constraints that enforce time-windows on the visits and capacities on the vehicles. Experiment results demonstrate the efficiency and flexibility of this CP domain for solving some hard VRP problems, including the Dial-A-Ride, the Patient Transportation, and the asymmetric TSP with time windows.}
+      \field{isbn}{9783959772402}
+      \field{issn}{1868-8969}
+      \field{journaltitle}{LIPIcs, Volume 235, CP 2022}
+      \field{langid}{english}
+      \field{nameatype}{collaborator}
+      \field{title}{Sequence {{Variables}} for {{Routing Problems}}}
+      \field{urlday}{12}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{volume}{235}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{19:1\bibrangedash 19:17}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.4230/LIPICS.CP.2022.19
+      \endverb
+      \verb{file}
+      \verb Datensatz\Van Hentenryck - 2022 - Pascal Van Hentenryck [vanh22da].pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CP.2022.19
+      \endverb
+      \verb{url}
+      \verb https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CP.2022.19
+      \endverb
+      \keyw{Constraint Programming,Vehicle Routing}
+    \endentry
+    \entry{labor18jo}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=934422cacad7a82fd04408a2f3006247}{%
+           family={Laborie},
+           familyi={L\bibinitperiod},
+           given={Philippe},
+           giveni={P\bibinitperiod}}}%
+        {{hash=99799d3d3acad0ff3791a81c1465810c}{%
+           family={Rogerie},
+           familyi={R\bibinitperiod},
+           given={Jérôme},
+           giveni={J\bibinitperiod}}}%
+        {{hash=1ce99fc04a49c5e2b3719c57fc88574a}{%
+           family={Shaw},
+           familyi={S\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=4cb8a0f1dd61a822b365298b0b4a1f8c}{%
+           family={Vilím},
+           familyi={V\bibinitperiod},
+           given={Petr},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{a876541512d0bff4050f8fe5c9506808}
+      \strng{fullhash}{7790c8d8d3fc3d18d82da29cc36a5b0a}
+      \strng{fullhashraw}{7790c8d8d3fc3d18d82da29cc36a5b0a}
+      \strng{bibnamehash}{a876541512d0bff4050f8fe5c9506808}
+      \strng{authorbibnamehash}{a876541512d0bff4050f8fe5c9506808}
+      \strng{authornamehash}{a876541512d0bff4050f8fe5c9506808}
+      \strng{authorfullhash}{7790c8d8d3fc3d18d82da29cc36a5b0a}
+      \strng{authorfullhashraw}{7790c8d8d3fc3d18d82da29cc36a5b0a}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{IBM ILOG CP Optimizer is a generic CP-based system to model and solve scheduling problems. It provides an algebraic language with simple mathematical concepts to capture the temporal dimension of scheduling problems in a combinatorial optimization framework. CP Optimizer implements a model-and-run paradigm that vastly reduces the burden on the user to understand CP or scheduling algorithms: modeling is by far the most important. The automatic search provides good performance out of the box and it is continuously improving. This article gives a detailed overview of CP Optimizer for scheduling: typical applications, modeling concepts, examples, automatic search, tools and performance.}
+      \field{day}{1}
+      \field{issn}{1572-9354}
+      \field{journaltitle}{Constraints}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{number}{2}
+      \field{shortjournal}{Constraints}
+      \field{title}{{{IBM ILOG CP}} Optimizer for Scheduling}
+      \field{urlday}{13}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{volume}{23}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{210\bibrangedash 250}
+      \range{pages}{41}
+      \verb{doi}
+      \verb 10.1007/s10601-018-9281-x
+      \endverb
+      \verb{file}
+      \verb Zeitschriftenartikel\Laborie et al - 2018 - IBM ILOG CP optimizer for scheduling [labor18joa].pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s10601-018-9281-x
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s10601-018-9281-x
+      \endverb
+      \keyw{Constraint Programming,Scheduling}
+    \endentry
+    \entry{IBMIwe}{online}{}{}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labeltitlesource}{title}
+      \field{abstract}{IBM ILOG CPLEX Optimization Studio ist eine Software zur Entscheidungsoptimierung für die Erstellung und Lösung komplexer Optimierungsmodelle.}
+      \field{langid}{ngerman}
+      \field{title}{IBM ILOG CPLEX Optimization Studio}
+      \field{urlday}{13}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ibm.com/de-de/products/ilog-cplex-optimization-studio
+      \endverb
+      \verb{url}
+      \verb https://www.ibm.com/de-de/products/ilog-cplex-optimization-studio
+      \endverb
+      \keyw{Constraint Programming}
+    \endentry
+    \entry{Solviwea}{online}{}{}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labeltitlesource}{title}
+      \field{title}{3.3. {{Solving Technologies}} and {{Solver Backends}} — {{The MiniZinc Handbook}} 2.4.3}
+      \field{urlday}{13}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb ..\..\Zotero\storage\W54VRUYR\solvers.html
+      \endverb
+      \verb{urlraw}
+      \verb https://docs.minizinc.dev/en/2.4.3/solvers.html
+      \endverb
+      \verb{url}
+      \verb https://docs.minizinc.dev/en/2.4.3/solvers.html
+      \endverb
+      \keyw{Constraint Programming}
+    \endentry
+    \entry{ORToowe}{online}{}{}
+      \list{organization}{1}{%
+        {Google for Developers}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Die OR-Tools-Suite bietet Softwarebibliotheken und APIs für die Vorgangsoptimierung, mit denen die Einschränkung, die lineare Optimierung sowie Fluss- und Grafikalgorithmen optimiert werden.}
+      \field{langid}{ngerman}
+      \field{title}{OR-Tools}
+      \field{urlday}{13}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb ..\..\Zotero\storage\EMREIYBY\optimization.html
+      \endverb
+      \verb{urlraw}
+      \verb https://developers.google.com/optimization?hl=de
+      \endverb
+      \verb{url}
+      \verb https://developers.google.com/optimization?hl=de
+      \endverb
+      \keyw{Constraint Programming,new}
+    \endentry
+    \entry{GECODwe}{online}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{{{GECODE}} - {{An}} Open, Free, Efficient Constraint Solving Toolkit}
+      \field{urlday}{13}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb ..\..\Zotero\storage\QVDNSWR3\www.gecode.org.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.gecode.org/
+      \endverb
+      \verb{url}
+      \verb https://www.gecode.org/
+      \endverb
+      \keyw{Constraint Programming}
+    \endentry
+    \entry{Chuff24co}{software}{}{}
+      \list{organization}{1}{%
+        {Chuffed}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The Chuffed CP solver}
+      \field{day}{21}
+      \field{hour}{5}
+      \field{minute}{13}
+      \field{month}{5}
+      \field{origday}{27}
+      \field{orighour}{1}
+      \field{origminute}{6}
+      \field{origmonth}{9}
+      \field{origsecond}{50}
+      \field{origtimezone}{Z}
+      \field{origyear}{2016}
+      \field{second}{26}
+      \field{timezone}{Z}
+      \field{title}{Chuffed/Chuffed}
+      \field{urlday}{13}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{origdateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/chuffed/chuffed
+      \endverb
+      \verb{url}
+      \verb https://github.com/chuffed/chuffed
+      \endverb
+      \keyw{Constraint Programming}
+    \endentry
+    \entry{MiniZwe}{online}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{{{MiniZinc}}}
+      \field{urlday}{14}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb ..\..\Zotero\storage\BJSNVISH\www.minizinc.org.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.minizinc.org/
+      \endverb
+      \verb{url}
+      \verb https://www.minizinc.org/
+      \endverb
+      \keyw{Constraint Programming,MiniZinc}
+    \endentry
+    \entry{Homewe}{online}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{Home | {{MiniZinc Challenge}} 2024}
+      \field{urlday}{14}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb ..\..\Zotero\storage\KETX63LV\challenge.minizinc.org.html
+      \endverb
+      \verb{urlraw}
+      \verb https://challenge.minizinc.org/
+      \endverb
+      \verb{url}
+      \verb https://challenge.minizinc.org/
+      \endverb
+      \keyw{Constraint Programming,MiniZinc}
+    \endentry
+    \entry{gritz13bo}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=e45eb5c8fdc7ce023aa3cf5560420469}{%
+           family={Gritzmann},
+           familyi={G\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Wiesbaden}%
+      }
+      \list{publisher}{1}{%
+        {Springer Fachmedien Wiesbaden}%
+      }
+      \strng{namehash}{e45eb5c8fdc7ce023aa3cf5560420469}
+      \strng{fullhash}{e45eb5c8fdc7ce023aa3cf5560420469}
+      \strng{fullhashraw}{e45eb5c8fdc7ce023aa3cf5560420469}
+      \strng{bibnamehash}{e45eb5c8fdc7ce023aa3cf5560420469}
+      \strng{authorbibnamehash}{e45eb5c8fdc7ce023aa3cf5560420469}
+      \strng{authornamehash}{e45eb5c8fdc7ce023aa3cf5560420469}
+      \strng{authorfullhash}{e45eb5c8fdc7ce023aa3cf5560420469}
+      \strng{authorfullhashraw}{e45eb5c8fdc7ce023aa3cf5560420469}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{annotation}{3-Sat\\ K-Sat}
+      \field{isbn}{978-3-528-07290-2 978-3-8348-2011-2}
+      \field{langid}{ngerman}
+      \field{shorttitle}{Grundlagen der Mathematischen Optimierung}
+      \field{title}{Grundlagen der Mathematischen Optimierung: Diskrete Strukturen, Komplexitätstheorie, Konvexitätstheorie, Lineare Optimierung, Simplex-Algorithmus, Dualität}
+      \field{urlday}{14}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Buch\Gritzmann - 2013 - Grundlagen der Mathematischen Optimierung - Diskrete Strukturen, [gritz13bo] DOI 10.1007978-3-8348-2011-2.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://link.springer.com/10.1007/978-3-8348-2011-2
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/10.1007/978-3-8348-2011-2
+      \endverb
+      \keyw{3-Sat,K-Sat}
+    \endentry
+    \entry{amadi15jo}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=5d95e3c73d6bcfde4399074296b20dc9}{%
+           family={Amadini},
+           familyi={A\bibinitperiod},
+           given={Roberto},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{5d95e3c73d6bcfde4399074296b20dc9}
+      \strng{fullhash}{5d95e3c73d6bcfde4399074296b20dc9}
+      \strng{fullhashraw}{5d95e3c73d6bcfde4399074296b20dc9}
+      \strng{bibnamehash}{5d95e3c73d6bcfde4399074296b20dc9}
+      \strng{authorbibnamehash}{5d95e3c73d6bcfde4399074296b20dc9}
+      \strng{authornamehash}{5d95e3c73d6bcfde4399074296b20dc9}
+      \strng{authorfullhash}{5d95e3c73d6bcfde4399074296b20dc9}
+      \strng{authorfullhashraw}{5d95e3c73d6bcfde4399074296b20dc9}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Typen Constraint Problems}
+      \field{issn}{1383-7133, 1572-9354}
+      \field{journaltitle}{Constraints}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{number}{4}
+      \field{shortjournal}{Constraints}
+      \field{title}{Portfolio Approaches in Constraint Programming}
+      \field{urlday}{9}
+      \field{urlmonth}{11}
+      \field{urlyear}{2023}
+      \field{volume}{20}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{483\bibrangedash 483}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1007/s10601-015-9215-9
+      \endverb
+      \verb{file}
+      \verb Zeitschriftenartikel\Amadini - 2015 - Portfolio approaches in constraint programming [amadi2015].pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/s10601-015-9215-9
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/s10601-015-9215-9
+      \endverb
+      \keyw{Constraint Programming,Important,Typen Constraint Problems}
+    \endentry
+    \entry{marti21bo}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=f78019558101a841974c5f3b5a885657}{%
+           family={Martins},
+           familyi={M\bibinitperiod},
+           given={Joaquim\bibnamedelimb R.\bibnamedelimi R.\bibnamedelimi A.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=93ca2cb81a3707f9a26c8b4c7425e445}{%
+           family={Ning},
+           familyi={N\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{55dc6cf10b12287e88ed45c38cbd30af}
+      \strng{fullhash}{55dc6cf10b12287e88ed45c38cbd30af}
+      \strng{fullhashraw}{55dc6cf10b12287e88ed45c38cbd30af}
+      \strng{bibnamehash}{55dc6cf10b12287e88ed45c38cbd30af}
+      \strng{authorbibnamehash}{55dc6cf10b12287e88ed45c38cbd30af}
+      \strng{authornamehash}{55dc6cf10b12287e88ed45c38cbd30af}
+      \strng{authorfullhash}{55dc6cf10b12287e88ed45c38cbd30af}
+      \strng{authorfullhashraw}{55dc6cf10b12287e88ed45c38cbd30af}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Based on course-tested material, this rigorous yet accessible graduate textbook covers both fundamental and advanced optimization theory and algorithms. It covers a wide range of numerical methods and topics, including both gradient-based and gradient-free algorithms, multidisciplinary design optimization, and uncertainty, with instruction on how to determine which algorithm should be used for a given application. It also provides an overview of models and how to prepare them for use with numerical optimization, including derivative computation. Over 400 high-quality visualizations and numerous examples facilitate understanding of the theory, and practical tips address common issues encountered in practical engineering design optimization and how to address them. Numerous end-of-chapter homework problems, progressing in difficulty, help put knowledge into practice. Accompanied online by a solutions manual for instructors and source code for problems, this is ideal for a one- or two-semester graduate course on optimization in aerospace, civil, mechanical, electrical, and chemical engineering departments.}
+      \field{annotation}{Constraint Optimization Problem}
+      \field{day}{18}
+      \field{edition}{1}
+      \field{isbn}{978-1-108-98064-7 978-1-108-83341-7}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{title}{Engineering {{Design Optimization}}}
+      \field{urlday}{15}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Buch\Martins, Ning - 2021 - Engineering Design Optimization [marti21bo] Constraint Optimization Problem.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.cambridge.org/core/product/identifier/9781108980647/type/book
+      \endverb
+      \verb{url}
+      \verb https://www.cambridge.org/core/product/identifier/9781108980647/type/book
+      \endverb
+      \keyw{Constraint Optimization Problem}
+    \endentry
+    \entry{dakin65jo}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=1958c9189da0f230530e69947a1156d5}{%
+           family={Dakin},
+           familyi={D\bibinitperiod},
+           given={R.\bibnamedelimi J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{1958c9189da0f230530e69947a1156d5}
+      \strng{fullhash}{1958c9189da0f230530e69947a1156d5}
+      \strng{fullhashraw}{1958c9189da0f230530e69947a1156d5}
+      \strng{bibnamehash}{1958c9189da0f230530e69947a1156d5}
+      \strng{authorbibnamehash}{1958c9189da0f230530e69947a1156d5}
+      \strng{authornamehash}{1958c9189da0f230530e69947a1156d5}
+      \strng{authorfullhash}{1958c9189da0f230530e69947a1156d5}
+      \strng{authorfullhashraw}{1958c9189da0f230530e69947a1156d5}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{1}
+      \field{issn}{0010-4620, 1460-2067}
+      \field{journaltitle}{The Computer Journal}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{number}{3}
+      \field{shortjournal}{The Computer Journal}
+      \field{title}{A Tree-Search Algorithm for Mixed Integer Programming Problems}
+      \field{urlday}{15}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{volume}{8}
+      \field{year}{1965}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{250\bibrangedash 255}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1093/comjnl/8.3.250
+      \endverb
+      \verb{file}
+      \verb Zeitschriftenartikel\Dakin - 1965 - A tree-search algorithm for mixed integer programming problems [dakin65jo].pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://academic.oup.com/comjnl/article-lookup/doi/10.1093/comjnl/8.3.250
+      \endverb
+      \verb{url}
+      \verb https://academic.oup.com/comjnl/article-lookup/doi/10.1093/comjnl/8.3.250
+      \endverb
+      \keyw{Branch and Bound,Integer Programm}
+    \endentry
+    \entry{hofst07bo}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=6e497dd27a270c0758bd752dca43296b}{%
+           family={Hofstedt},
+           familyi={H\bibinitperiod},
+           given={Petra},
+           giveni={P\bibinitperiod}}}%
+        {{hash=6509910bcf61c10f6334cce3f6a50584}{%
+           family={Wolf},
+           familyi={W\bibinitperiod},
+           given={Armin},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{1ae8331ad3b19b09b247c2b7544b7445}
+      \strng{fullhash}{1ae8331ad3b19b09b247c2b7544b7445}
+      \strng{fullhashraw}{1ae8331ad3b19b09b247c2b7544b7445}
+      \strng{bibnamehash}{1ae8331ad3b19b09b247c2b7544b7445}
+      \strng{authorbibnamehash}{1ae8331ad3b19b09b247c2b7544b7445}
+      \strng{authornamehash}{1ae8331ad3b19b09b247c2b7544b7445}
+      \strng{authorfullhash}{1ae8331ad3b19b09b247c2b7544b7445}
+      \strng{authorfullhashraw}{1ae8331ad3b19b09b247c2b7544b7445}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Die Constraint-Programmierung liefert Methoden zur effizienten Modellierung von Systemen oder zur Lösung von Problemstellungen, bei denen nur unvollständige Informationen vorliegen (z.B. Entscheidungssysteme, Optimierungsprobleme, Analyse stochastischer Prozesse), sowie zur Lösung kombinatorischer Probleme (Ressourcenmanagement) oder auch bei der Entwicklung komplexer Deduktionssysteme. Dieses Lehrbuch gibt eine kompakte Einführung in die Constraint-Programmierung. Dabei werden neben allgemeinen theoretischen Grundlagen auch Sprachen, Methoden und Verfahren zur Modellierung und Lösung von Constraint-Problemen vorgestellt sowie deren Anwendungsfelder betrachtet und anhand typischer Beispiele wie Terminplanung, Finanzwesen, Optimierung, Simulation und Diagnose vergegenständlicht. Das Buch richtet sich an Studierende der Informatik im Hauptstudium. Es basiert auf einer einsemestrigen Vorlesung mit Übungen der Autoren. TOC:Einführung.- Prädikatenlogik.- Logische Programmierung.- Logische Programmierung mit Constraints.- Constraints und Constraint-Systeme.- Constraint-Löser.- Finite-Domain-Constraints.- Lineare Arithmetische Constraints.- Intervall-Arithmetik-Constraints.- Constraint-Sprachen.- Constraint-Handling-Rules.- Concurrent-Constraint-Programmierung.- Constraintimperative und Objektorientierte Programmierung.- Multiparadigmen-Programmiersprachen.- Modellierung von Constraint-Problemen.- Globale Constraints.- Redundante und implizite Constraints.- Symmetrien und Transformationen.- Lösen von Constraint-Problemen.- Suche und Optimierung.- Heuristiken}
+      \field{annotation}{Constraint Programming\\ Simplex Method}
+      \field{isbn}{978-3-540-23184-4}
+      \field{langid}{ngerman}
+      \field{pagetotal}{388}
+      \field{series}{eXamen.press}
+      \field{shorttitle}{Einführung in die Constraint-Programmierung}
+      \field{title}{Einführung in die Constraint-Programmierung: Grundlagen, Methoden, Sprachen, Anwendungen}
+      \field{year}{2007}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb Buch\Hofstedt, Wolf - 2007 - Einführung in die Constraint-Programmierung - Grundlagen, Methoden, Sprachen,.pdf
+      \endverb
+      \keyw{Constraint Programming,Simplex Method}
+    \endentry
+    \entry{boyd04bo}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=5cd9791a43b8812be4e3f9d64521947a}{%
+           family={Boyd},
+           familyi={B\bibinitperiod},
+           given={Stephen\bibnamedelima P.},
+           giveni={S\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=2608d599a0bc2a784c301329a8da5f7b}{%
+           family={Vandenberghe},
+           familyi={V\bibinitperiod},
+           given={Lieven},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, UK ; New York}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{51b5c5e76e19784bb7c212d8d9235828}
+      \strng{fullhash}{51b5c5e76e19784bb7c212d8d9235828}
+      \strng{fullhashraw}{51b5c5e76e19784bb7c212d8d9235828}
+      \strng{bibnamehash}{51b5c5e76e19784bb7c212d8d9235828}
+      \strng{authorbibnamehash}{51b5c5e76e19784bb7c212d8d9235828}
+      \strng{authornamehash}{51b5c5e76e19784bb7c212d8d9235828}
+      \strng{authorfullhash}{51b5c5e76e19784bb7c212d8d9235828}
+      \strng{authorfullhashraw}{51b5c5e76e19784bb7c212d8d9235828}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-521-83378-3}
+      \field{pagetotal}{716}
+      \field{title}{Convex Optimization}
+      \field{year}{2004}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb Buch\Boyd, Vandenberghe - 2004 - Convex optimization [boyd04bo]2.pdf
+      \endverb
+      \keyw{Convex functions,Mathematical optimization}
+    \endentry
+    \entry{noced06bo}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=88a342d927bf795b0d92af8a5613da31}{%
+           family={Nocedal},
+           familyi={N\bibinitperiod},
+           given={Jorge},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c49efb16d3fa7eef002cc3620d42ab8a}{%
+           family={Wright},
+           familyi={W\bibinitperiod},
+           given={Stephen\bibnamedelima J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{5b8fd28f6245ae8b0af119560622fa4f}
+      \strng{fullhash}{5b8fd28f6245ae8b0af119560622fa4f}
+      \strng{fullhashraw}{5b8fd28f6245ae8b0af119560622fa4f}
+      \strng{bibnamehash}{5b8fd28f6245ae8b0af119560622fa4f}
+      \strng{authorbibnamehash}{5b8fd28f6245ae8b0af119560622fa4f}
+      \strng{authornamehash}{5b8fd28f6245ae8b0af119560622fa4f}
+      \strng{authorfullhash}{5b8fd28f6245ae8b0af119560622fa4f}
+      \strng{authorfullhashraw}{5b8fd28f6245ae8b0af119560622fa4f}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Convex functions}
+      \field{edition}{2nd ed}
+      \field{isbn}{978-0-387-30303-1}
+      \field{langid}{english}
+      \field{pagetotal}{664}
+      \field{series}{Springer Series in Operations Research}
+      \field{title}{Numerical Optimization}
+      \field{year}{2006}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb Buch\Nocedal, Wright - 2006 - Numerical optimization [noced06bo] Convex functions.pdf
+      \endverb
+      \keyw{Convex functions}
+    \endentry
+    \entry{kotth12jo}{unpublished}{}{}
+      \name{author}{1}{}{%
+        {{hash=d989545591ff0b2bb124972c34d7811b}{%
+           family={Kotthoff},
+           familyi={K\bibinitperiod},
+           given={Lars},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{d989545591ff0b2bb124972c34d7811b}
+      \strng{fullhash}{d989545591ff0b2bb124972c34d7811b}
+      \strng{fullhashraw}{d989545591ff0b2bb124972c34d7811b}
+      \strng{bibnamehash}{d989545591ff0b2bb124972c34d7811b}
+      \strng{authorbibnamehash}{d989545591ff0b2bb124972c34d7811b}
+      \strng{authornamehash}{d989545591ff0b2bb124972c34d7811b}
+      \strng{authorfullhash}{d989545591ff0b2bb124972c34d7811b}
+      \strng{authorfullhashraw}{d989545591ff0b2bb124972c34d7811b}
+      \field{extraname}{1}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The Algorithm Selection Problem is concerned with selecting the best algorithm to solve a given problem on a case-by-case basis. It has become especially relevant in the last decade, as researchers are increasingly investigating how to identify the most suitable existing algorithm for solving a problem instead of developing new algorithms. This survey presents an overview of this work focusing on the contributions made in the area of combinatorial search problems, where Algorithm Selection techniques have achieved significant performance improvements. We unify and organise the vast literature according to criteria that determine Algorithm Selection systems in practice. The comprehensive classification of approaches identifies and analyses the different directions from which Algorithm Selection has been approached. This paper contrasts and compares different methods for solving the problem as well as ways of using these solutions. It closes by identifying directions of current and future research.}
+      \field{day}{30}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arxiv}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{shorttitle}{Algorithm {{Selection}} for {{Combinatorial Search Problems}}}
+      \field{title}{Algorithm {{Selection}} for {{Combinatorial Search Problems}}: {{A Survey}}}
+      \field{urlday}{15}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{year}{2012}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{eprint}
+      \verb 1210.7959
+      \endverb
+      \verb{file}
+      \verb Preprint\Kotthoff - 2012 - Algorithm Selection for Combinatorial Search Problems - A Survey [kotth12pr] arXiv1210.7959 [cs].pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1210.7959
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1210.7959
+      \endverb
+      \keyw{Important}
+    \endentry
+    \entry{popes22jo}{article}{}{}
+      \name{author}{9}{}{%
+        {{hash=4916c585d4c7d99f27aa6bb8ca2f890a}{%
+           family={Popescu},
+           familyi={P\bibinitperiod},
+           given={Andrei},
+           giveni={A\bibinitperiod}}}%
+        {{hash=03817c65e8675e82f59cda53a7f50394}{%
+           family={Polat-Erdeniz},
+           familyi={P\bibinithyphendelim E\bibinitperiod},
+           given={Seda},
+           giveni={S\bibinitperiod}}}%
+        {{hash=81655836ef41c3264e367ccbbd394701}{%
+           family={Felfernig},
+           familyi={F\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=eba449da8373eb50c829f9cf7b41467a}{%
+           family={Uta},
+           familyi={U\bibinitperiod},
+           given={Mathias},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d755b40958c1a915ed36bbcd8e8c2f09}{%
+           family={Atas},
+           familyi={A\bibinitperiod},
+           given={Müslüm},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c1c461a39612b78a18a1f241cea54740}{%
+           family={Le},
+           familyi={L\bibinitperiod},
+           given={Viet-Man},
+           giveni={V\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=931139b8859435cc4cbb0966bfaf9bfa}{%
+           family={Pilsl},
+           familyi={P\bibinitperiod},
+           given={Klaus},
+           giveni={K\bibinitperiod}}}%
+        {{hash=b396bd71d432d8af5056ab929e83dc22}{%
+           family={Enzelsberger},
+           familyi={E\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=cd8e42132909acf8239507aaa6557454}{%
+           family={Tran},
+           familyi={T\bibinitperiod},
+           given={Thi\bibnamedelimb Ngoc\bibnamedelima Trang},
+           giveni={T\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \strng{namehash}{f80ffc7b44ac5117bd7295a14176a2e7}
+      \strng{fullhash}{2704ee6a51a5a9dcaf7fab3a8d2304b6}
+      \strng{fullhashraw}{2704ee6a51a5a9dcaf7fab3a8d2304b6}
+      \strng{bibnamehash}{f80ffc7b44ac5117bd7295a14176a2e7}
+      \strng{authorbibnamehash}{f80ffc7b44ac5117bd7295a14176a2e7}
+      \strng{authornamehash}{f80ffc7b44ac5117bd7295a14176a2e7}
+      \strng{authorfullhash}{2704ee6a51a5a9dcaf7fab3a8d2304b6}
+      \strng{authorfullhashraw}{2704ee6a51a5a9dcaf7fab3a8d2304b6}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Constraint solving is applied in different application contexts. Examples thereof are the configuration of complex products and services, the determination of production schedules, and the determination of recommendations in online sales scenarios. Constraint solvers apply, for example, search heuristics to assure adequate runtime performance and prediction quality. Several approaches have already been developed showing that machine learning (ML) can be used to optimize search processes in constraint solving. In this article, we provide an overview of the state of the art in applying ML approaches to constraint solving problems including constraint satisfaction, SAT solving, answer set programming (ASP) and applications thereof such as configuration, constraint-based recommendation, and model-based diagnosis. We compare and discuss the advantages and disadvantages of these approaches and point out relevant directions for future work.}
+      \field{issn}{0925-9902, 1573-7675}
+      \field{journaltitle}{Journal of Intelligent Information Systems}
+      \field{langid}{english}
+      \field{month}{2}
+      \field{number}{1}
+      \field{shortjournal}{J Intell Inf Syst}
+      \field{title}{An Overview of Machine Learning Techniques in Constraint Solving}
+      \field{urlday}{15}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{volume}{58}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{91\bibrangedash 118}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1007/s10844-021-00666-5
+      \endverb
+      \verb{file}
+      \verb ..\..\Zotero\storage\S8BU9AY9\Popescu et al. - 2022 - An overview of machine learning techniques in cons.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://link.springer.com/10.1007/s10844-021-00666-5
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/10.1007/s10844-021-00666-5
+      \endverb
+      \keyw{Important}
+    \endentry
+    \entry{bisch18pr}{online}{}{}
+      \name{author}{6}{}{%
+        {{hash=c5695b464b6059e7047553d017275f65}{%
+           family={Bischl},
+           familyi={B\bibinitperiod},
+           given={Bernd},
+           giveni={B\bibinitperiod}}}%
+        {{hash=193c69a9c8416f8bdc4c980af413a4c3}{%
+           family={Richter},
+           familyi={R\bibinitperiod},
+           given={Jakob},
+           giveni={J\bibinitperiod}}}%
+        {{hash=d53a0416d66e471520bb7658402d0837}{%
+           family={Bossek},
+           familyi={B\bibinitperiod},
+           given={Jakob},
+           giveni={J\bibinitperiod}}}%
+        {{hash=d0e86ded6356e7ba52e0f95bec21794c}{%
+           family={Horn},
+           familyi={H\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=50f63940b6a88b8360d6cb0988ceb5a9}{%
+           family={Thomas},
+           familyi={T\bibinitperiod},
+           given={Janek},
+           giveni={J\bibinitperiod}}}%
+        {{hash=081c44d48de07decc0eb61e6b652e349}{%
+           family={Lang},
+           familyi={L\bibinitperiod},
+           given={Michel},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{57c73c265eb28377149f924698b3a3da}
+      \strng{fullhash}{00907b3305e3ffb88421e3f8ad8df0e6}
+      \strng{fullhashraw}{00907b3305e3ffb88421e3f8ad8df0e6}
+      \strng{bibnamehash}{57c73c265eb28377149f924698b3a3da}
+      \strng{authorbibnamehash}{57c73c265eb28377149f924698b3a3da}
+      \strng{authornamehash}{57c73c265eb28377149f924698b3a3da}
+      \strng{authorfullhash}{00907b3305e3ffb88421e3f8ad8df0e6}
+      \strng{authorfullhashraw}{00907b3305e3ffb88421e3f8ad8df0e6}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{We present mlrMBO, a flexible and comprehensive R toolbox for model-based optimization (MBO), also known as Bayesian optimization, which addresses the problem of expensive black-box optimization by approximating the given objective function through a surrogate regression model. It is designed for both single- and multi-objective optimization with mixed continuous, categorical and conditional parameters. Additional features include multi-point batch proposal, parallelization, visualization, logging and error-handling. mlrMBO is implemented in a modular fashion, such that single components can be easily replaced or adapted by the user for specific use cases, e.g., any regression learner from the mlr toolbox for machine learning can be used, and infill criteria and infill optimizers are easily exchangeable. We empirically demonstrate that mlrMBO provides state-of-the-art performance by comparing it on different benchmark scenarios against a wide range of other optimizers, including DiceOptim, rBayesianOptimization, SPOT, SMAC, Spearmint, and Hyperopt.}
+      \field{day}{3}
+      \field{eprintclass}{stat}
+      \field{eprinttype}{arxiv}
+      \field{month}{12}
+      \field{pubstate}{preprint}
+      \field{shorttitle}{{{mlrMBO}}}
+      \field{title}{{{mlrMBO}}: {{A Modular Framework}} for {{Model-Based Optimization}} of {{Expensive Black-Box Functions}}}
+      \field{urlday}{11}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{eprint}
+      \verb 1703.03373
+      \endverb
+      \verb{file}
+      \verb Preprint\Bischl et al - 2018 - mlrMBO - A Modular Framework for Model-Based Optimization of Expensive Black-Box [bisch18pra] arXiv1703.03373 [stat].pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1703.03373
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1703.03373
+      \endverb
+      \keyw{Constraint Programming,new,Statistics - Machine Learning}
+    \endentry
+    \entry{kotth23pr}{unpublished}{}{}
+      \name{author}{1}{}{%
+        {{hash=d989545591ff0b2bb124972c34d7811b}{%
+           family={Kotthoff},
+           familyi={K\bibinitperiod},
+           given={Lars},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{d989545591ff0b2bb124972c34d7811b}
+      \strng{fullhash}{d989545591ff0b2bb124972c34d7811b}
+      \strng{fullhashraw}{d989545591ff0b2bb124972c34d7811b}
+      \strng{bibnamehash}{d989545591ff0b2bb124972c34d7811b}
+      \strng{authorbibnamehash}{d989545591ff0b2bb124972c34d7811b}
+      \strng{authornamehash}{d989545591ff0b2bb124972c34d7811b}
+      \strng{authorfullhash}{d989545591ff0b2bb124972c34d7811b}
+      \strng{authorfullhashraw}{d989545591ff0b2bb124972c34d7811b}
+      \field{extraname}{2}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{11}
+      \field{eventtitle}{{{ACP Summer School}}}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{title}{Getting the {{Best}} out of Your {{Constraint Solver}}: {{Portfolios}} and {{Automated Tuning}}}
+      \field{venue}{Leuven}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb Zeitschriftenartikel\Kotthoff - Getting the Best out of your Constraint Solver - Portfolios and Automated Tuning.pdf
+      \endverb
+      \keyw{Constraint Programming,Important}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

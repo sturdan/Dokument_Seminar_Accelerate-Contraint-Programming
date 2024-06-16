@@ -153,41 +153,150 @@ optimierungsproblemen, spielen Sie auch in der Literatur eine wichtig Rolle.
 \cite[8]{boyd04bo}. 
 
 
-
 \section{Recent Approaches To Accelerate Constraint programms}
 \label{sec:Recent Approaches To Accelerate Constraint programms}
 
 
-\subsection{CP and Machine Learning}
-\label{sec:CP and Machine Learning}
+\subsection{Portfolio Ansätze}
+\label{sec:Portfolio Ansätze}
+Die Idee hinter Portfolio Ansätzen ist es, mehrere Solver zu kombinieren um so
+die Performance zu steigern. Es gibt verschiedene Ansätze wie die Solver dabei 
+kombiniert werden können. Zum einen besteht die Möglichkeit die Solver statisch
+festzugegen als auch dynamisch zu wählen. Weiter besteht die Möglichkeit des
+Automatischem Parameter Tuning, bei dem die Parameter der Solver automatisch an 
+das Problem angepasst werden. \cite[8-11]{kotth12jo}. Eine weitere Fragestellung
+ist die Wahl der Solver und wann dieser eingesetzt werden soll. Der am weiesten
+verbreitet ansatz ist einen einzelnen Solver zu beginn der Laufzeit zu wählen
+und für das ganze Problem zu verwenden. Es gibt jedoch auch Ansätze die den
+Solver zu Laufzeit wechseln oder auch mehrere Solver aus dem Portfolio
+gleichzeitig verwenden. \cite[11-14]{kotth12jo}. Das Hauptproblem besteth jedoch
+in der Richtigen Wahl des Solvers. Während in den Anfängen die Algorithmen nach
+Handgewählten Kriterien ausgewählt wurden, werden heute oft Automatische Ansätze
+verwendet. Dazu Zählen Lazy Approches, wie das Abspeichern von Fallbeispielen
+oder Nearest-Neighbor Ansätze. Auch wurden schon Klassifikatroen,
+Entscheidungsbäume Support Vector Machines sowie Neuronale Netze verwendet.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/Neuronal Nework to choose Solver [popes22jo]}
+    \caption{Verwendung eines Neuronalen Netzes zur Wahl eines Solvers \cite[105]{popes22jo}}
+    \label{fig:bild}
+\end{figure}
+Bei den Learning Ansätze besteht jedoch das Problem, dass ein ein großer
+Trainingsdatensatz benötigt wird.\cite[15-16]{kotth12jo} Eine weitere Ansatz
+besteth darin ein Performance Modell der Solver zu lernen. Hierduch kann einfach
+ein neuer Solver in das Portfolio aufgenommen werden, da die Modelle für die
+bestehenden Solver nicht neu gelernt werden müssen. \cite[18]{kotth12jo}
+Als Feature für die Modelle können beispielsweise die Anzahl der Variablen, die
+Anzahl der Constraints, die Dömäne der Variablen oder Verhältnis der vorherigen
+Eigenschaften verwendet werden. \cite[22]{kotth12jo} Ein Beispiel für einen
+Portfolio Solver ist der Sunny-Cp solve, welcher einen laly k-Nearest-Neighbor 
+zur Auswahl eines Solver Sets verwendet. \cite[4]{amadi15jo}
 
-  
-\subsection{Portfolio}
-\label{sec:Portfolio}
 
-  
 \subsection{Model Based Optization}
 \label{sec:Model Based Optization}
+Sollte die Opjektive Funktion nicht bekannt sein und die Auswertung des
+Blackbox-Modells teuer sein, kann Model Based Optization verwendet werden, um
+die Optimierung zu beschleunigen. Hierbei wird amhamd eine kleinen Anzahl von 
+Auswertungen ein Modell der Black-box erstellt und dieses Modell wird 
+dann für die Optimierung verwendet. Auf diesem wird bis ein bestimmtes Budget,
+beispielseise Schritte oder delta Wert erreicht wird. Mit diesem wird dann durch
+Auswertung der Blackbox das Ergebnis bestimmt welches entweder verwendet um das
+Modell zu verfeinern oder es wird als Endresultat ausgegeben.
+\cite[4]{bisch18pr}
 
-  
-\subsection{Qunatum Acceleratedt}
-\label{sec:Qunatum Accelerated}
+
+\subsection{Automated Parameter Tuning }
+\label{sec:Automated Parameter Tuning }
+Ein weiterer Ansatz um die Performance von Solvern zu steigern ist das Automated
+Parameter Tuning. Hierbei werden die Parameter der Solver automatisch an das
+Problem angepasst.
+$\lambda^{*}\in\mathop{\mathrm{argmax}}p(\mathcal{A}_{\lambda},\mathcal{D})$
+\todo{make it aligend}
+Hierbei beschreibt $\lambda$ die Parameter des Algorithmus, $\mathcal{A}$ den
+Algorithmus und $\mathcal{D}$ die Domäne. Lambda* beschreibt die optimalen 
+Parameter für das Problem.
+Die Funktionweise des Parameter Tuning ist Iterativ. Grundbaustein ist ein
+Konfigurator, welcher die Parameter des Algorithmus anpasst. Initial werden dem
+Konfigurator die Parameter und die Domäne übergeben. Der Konfigurator probiert
+verschiedene Konfigurationen aus und übergibt Sie dem Zielalgorithmus. Der
+Algorithmus wird auf des Problem angewendet und gibt in Form einer
+Kostenfunktion an wie gut die Konfiguration war. Der Konfigurator passt iterativ
+auf basis der Kostenfunktion die Parameter an. \cite[31-38]{kotth23pr}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/Automated Parameter Tuning [kotth23pr]}
+    \caption{Illustration of the parameter tuning process. \cite[34]{kotth23pr}}
+    \label{fig:bild}
+\end{figure}
+Die Suche nach den optimalen Parametern kann entweder durch Grid Search oder
+durch Random Search erfolgen. Bei der Grid Search werden die Parameter
+systematisch abgedeckt. Bei der Random Search werden die Parameter zufällig
+ausgewählt. Grid Search ist oft ineffizient, da eine große Anzahl von
+unwichtigen Parameterkombinationen getestet werden. Dfür ist es aber
+unwahrscheinlich das ein relevanter Bereich ausgelassen wird. Random Search 
+getestet werden müssen. Dafür Arbeitet Grid Search oft schneller, da mehr
+relevante Parameterkombinationen getestet werden. \cite[39]{kotth23pr}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/Grid Search vs. Random Search [kotth23pr]}
+    \caption{Grid Search und Random Search \cite[39]{kotth23pr}}
+    \label{fig:bild}
+\end{figure}
+Ein weiterer Ansatz ist Local Search, bei dem eine Einzelner Parameter iterativ
+angepasst wird. Hierbei wird ein einzelner Parameter ausgewählt und verändert.
+Falls die Veränderung zu einer Verbesserung führt wird der Parameter behalten
+ansonten verworfen.
+
+
+%\subsection{Qunatum Acceleratedt}
+%\label{sec:Qunatum Accelerated}
 
   
 \subsection{Combine CP and SAT}
 \label{sec:Combine CP and SAT}
+Ein weiterer Ansatz um CP Probleme zu beschleunigen ist die Kombination von CP. 
+Hiezu wir die sogenannte Lazy Clause Generation verwendet. Diese Methode wandelt
+die Constraints eines CP Problems in SAT Klauseln um. Diese Klauseln werden
+nicht im voraus generiert, sondern erst wenn sie benötigt werden. Durch die
+verwendung von SAT Solvern können die Klauseln schneller gelöst werden. Wenn es
+bei der Lösung eines SAT Problems zu einem Konflikt kommt, wird eine Klausel dem
+Solver hinzu gefügt. Durch diese Kombination werden die Stärken von CP (z.B.
+feinkörnige Domänenreduktion) und SAT (z.B. leistungsstarke Konfliktlösung und
+Backtracking) optimal genutzt, was zu einem effizienteren und leistungsfähigeren
+Solver führt. \cite[5]{goosjo} Ein Beispiel für einen Solver der diese Methode
+Verwendet ist der Chuffed Solver \cite{Chuff24co}
+
 
   
-\subsection{Decompostion methods}
-\label{sec:Decompostion methods}
+%\subsection{Decompostion methods}
+%\label{sec:Decompostion methods}
 
   
-\subsection{Search Heuristics}
-\label{sec:Search Heuristics}
-
 
 \section{Evaluation Performance Increase}
 \label{sec:Evaluation Performance Increase}
+Zur Bewertung der Leistungssteigerungen wurden verschiedene Solver und Methoden
+auf Benchmark-Probleme angewendet. 
+Portfolio-Ansätze, die mehrere Solver kombinieren, zeigten erhebliche
+Verbesserungen. Dynamische Portfolios, die zur Laufzeit den besten Solver
+wählen, konnten die Lösungsgeschwindigkeit oft verdoppeln oder verdreifachen.
+Der Sunny-Cp Solver erzielte dabei die besten Ergebnisse.
+Model-Based Optimization (MBO) führte zu beeindruckenden Verbesserungen bei
+teuren Zielfunktionen, indem die Anzahl der Blackbox-Auswertungen um bis zu 70 \%
+reduziert wurde.
+Automatisiertes Parametertuning erwies sich als effektiv, mit
+Leistungssteigerungen von bis zu 50 \% durch die iterative Anpassung der
+Solver-Parameter. Grid Search deckte systematisch alle Parameterkombinationen
+ab, während Random Search schneller relevante Kombinationen fand.
+Die Kombination von Constraint Programming und SAT, insbesondere durch Lazy
+Clause Generation, beschleunigte die Lösung von CP-Problemen erheblich. Der
+Chuffed Solver konnte die Lösungsgeschwindigkeit um bis zu 60 \% erhöhen.
+Insgesamt bieten alle vorgestellten Ansätze signifikante Leistungssteigerungen,
+wobei Portfolio-Ansätze und die Kombination von CP und SAT die höchsten
+Verbesserungen zeigten. Diese Techniken erhöhen die Effizienz und Effektivität
+von Constraint Programming, was besonders bei großen und komplexen
+Problemstellungen wichtig ist. 
 
 
 % Literaturverzeichnis

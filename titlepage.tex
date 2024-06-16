@@ -4,38 +4,39 @@
   \vspace*{1em}
   \begin{center}
     \ifdefempty{\@subject}{}{%
-      {\usekomafont{subject}\@subject}
-      \par\vspace{2em}
-    }
-    {\usekomafont{title}\@title}
-    \ifdefempty{\@subtitle}{}{%
-      \par\vspace{.5em}
-      {\usekomafont{subtitle}\@subtitle}
-    }
-    \par\vspace{2em}
+      {\usekomafont{subject}\@subject} \par\vspace{2em} }
+      {\usekomafont{title}\@title} \ifdefempty{\@subtitle}{}{%
+      \par\vspace{.5em} {\usekomafont{subtitle}\@subtitle} } \par\vspace{2em}
     \singlespacing
     {\usekomafont{author}%
-      \@author\par
-      \GetTranslation{matrno}: \@matrno\par}
+      \@author\par \GetTranslation{matrno}: \@matrno\par}
     \texttt{\@email}
-    \par\vspace{1.5em}
-    {\usekomafont{publishers}\@publishers}
+    \par\vspace{1.5em} {\usekomafont{publishers}\@publishers}
   \end{center}
   \makeatother
 
   \begin{abstract}
     \noindent%
     \paragraph*{\abstractname}
-    \textcolor{red}{Bitte Dateien \texttt{settings.tex} und \texttt{titlepage.tex} anpassen.}
-    
-    Abstract Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+    Diese Arbeit untersucht aktuelle Ansätze zur Beschleunigung der
+    Constraint-Programmierung (CP) zur Lösung von Optimierungsproblemen mit
+    Nebenbedingungen. Es werden grundlegende Konzepte von Constraint
+    Satisfaction Problems (CSP) und Constraint Optimization Problems (COP)
+    diskutiert, gefolgt von aktuellen Beschleunigungsansätzen.
+
+    Die untersuchten Ansätze umfassen Portfolio-Methoden, modellbasierte
+    Optimierung, automatisches Parameter-Tuning und die Kombination von CP mit
+    SAT-Lösungen. Leistungsbewertungen anhand von Benchmark-Problemen zeigen
+    signifikante Verbesserungen, mit bis zu 70 \% weniger Auswertungen und bis zu 60%
+    schnellerer Lösungsgeschwindigkeit.
+
+    Diese Ansätze bieten wesentliche Verbesserungen in Effizienz und Wirksamkeit,
+    insbesondere für große und komplexe Probleminstanzen, und unterstreichen ihre
+    Bedeutung in der Constraint-Programmierung.
   \end{abstract}
 
   \vfill
   \centering
   \includegraphics[height=38mm]{figures/uni_siegel}
 \end{titlepage}
-%%% Local Variables:
-%%% mode: latex
-%%% TeX-master: "Seminararbeit"
-%%% End:
+%%% Local Variables: %% mode: latex %% TeX-master: "Seminararbeit" %% End:
