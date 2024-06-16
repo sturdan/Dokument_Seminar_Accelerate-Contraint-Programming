@@ -12,291 +12,326 @@
 
 \section{Einleitung: Verwendung von Constraint Programming}
 \label{sec:Einleitung-Verwendung-von-Constraint-Programming}
-Constraint Programming (CP) spielt in einem weiten Bereichen heutiger modernen
-Anwendungen eine große Rolle in welchen Optimierungsproblemen mit
-Nebenbedingungen gelöst werden müssen. Anwenungen hierzu sind unter anderem:
-Vehicel Routing, Scheduling, Planung, Konfiguration, Ressourcenallokation und
-Kombinatorische Optimierung. Auch findet jährlich die  Conference on Principles
-and Practice of Constraint Programming statt, in welcher aktuelle
-Forschungsergebnisse im Bereich CP diskutiert werden, wodurch die Wichtigkeit
-des Themenfeldes unterstrichen wird. \cite{CP20we}. Neben dem Klassischen
-Problem der Kursplannung \cite{duboi96jo} in der immer schneller werden Zeit,
-gib es auch in der Industrie eine Vielzahl von Scheduling Problemen, wie der
-Zuweiung von Aufträgen zu Maschinen \cite{gedik16jo}. Auch wurden CP Ansätze für
-die Konfiguration von Netzwerken verwendet \cite{ardisjo}. Ein weit Verbreitetes
-Kombinatirsches Optimierungsproblem ist das 3-SAT Problem. Es beschreibt die
-Frage ob eine Formel in konjunktiver Normalform (KNF) mit Klauseln aus jeweil 3
-Literalen erfüllbar ist.
-\cite[271]{rossi06bo} 
+
+Constraint Programming (CP) spielt in vielen modernen Anwendungen eine große
+Rolle, in denen Optimierungsprobleme mit Nebenbedingungen gelöst werden müssen.
+Anwendungen hierzu sind unter anderem: Vehicle Routing, Scheduling, Planung,
+Konfiguration, Ressourcenallokation und Kombinatorische Optimierung. Jedes Jahr
+findet die Conference on Principles and Practice of Constraint Programming
+statt, in der aktuelle Forschungsergebnisse im Bereich CP diskutiert werden, was
+die Wichtigkeit des Themenfeldes unterstreicht \cite{CP20we}. Neben dem
+klassischen Problem der Kursplanung \cite{duboi96jo} in einer sich ständig
+beschleunigenden Zeit gibt es auch in der Industrie eine Vielzahl von
+Scheduling-Problemen, wie die Zuweisung von Aufträgen zu Maschinen
+\cite{gedik16jo}. Auch wurden CP-Ansätze für die Konfiguration von Netzwerken
+verwendet \cite{ardisjo}. Ein weit verbreitetes kombinatorisches
+Optimierungsproblem ist das 3-SAT-Problem, das beschreibt, ob eine Formel in
+konjunktiver Normalform (KNF) mit Klauseln aus jeweils 3 Literalen erfüllbar ist
+\cite[271]{rossi06bo}. 
+
 Beispielsweise löst
 
-$$x_1=\mathrm{false},x_2=\mathrm{false},x_3=\mathrm{false},x_4=\mathrm{false}$$
+\[ x_1=\text{false}, x_2=\text{false}, x_3=\text{false}, x_4=\text{false} \]
 
-das folgende 3-SAT Problem:
+das folgende 3-SAT-Problem:
 
-$$(\lnot x_1\lor x_2\lor x_3)\land(x_1\lor\lnot x_2\lor x_4)\land(x_2\lor
-x_3\lor\lnot x_4)$$
+\[ (\lnot x_1 \lor x_2 \lor x_3) \land (x_1 \lor \lnot x_2 \lor x_4) \land (x_2
+\lor x_3 \lor \lnot x_4) \]
 
-Besonders Vehicel Routing ist in der heutighen Zeit für viele Unternehmen in der
-Logistikbranche und dem Flexiblen Transport von großer Bedeutung.
+Besonders Vehicle Routing ist in der heutigen Zeit für viele Unternehmen in der
+Logistikbranche und dem flexiblen Transport von großer Bedeutung
 \cite[1]{delec22jo}. Je nach Anwendungen und Problemstellung können
-unterschiedliche Constraint Programming Ansätze verwendet werden. Es exisiteren
-diveres Toolboxen um Contraint Programming Problem zu Lösen. Für das Vehicel
-Routing Problem, welches das Problem beschreibt für n Fahrzeuge und m Orte den
-kürzesten gesamt Weg zu finden \cite[222]{labor18jo}, kann beispielseise der IBM
-ILOG CP Optimzer verwendet werden.\cite{IBMIwe} Je nach Problemstellung gibe es
-eine Viehlzahl von weitern Toolboxen \cite{Solviwea}, Or-tools von Google ist
-eine weitere zum lösen von Constraint Programming (CP), Linear Programming (LP),
-Integer Programming (IP) und Boolean Satisfiability (SAT) Problemen.
-\cite{ORToowe}, Geocode ist eine Open Source Variante basierend auf C++
-\cite{GECODwe} und Chuffed is eine Varainte welche "lazy clause generation"
-ausnutzt um CP Probleme schneller zu lösen \cite{Chuff24co}. MiniZinc vereint
-unter anderem die im Vorherigen beschriebenen Softwarebibliotheken zu einer
-Ausdrucksspache zum Lösen von einer Vielzahl von LP, Transportprobleme (TP) und
-SAT Problemen. \cite{MiniZwe}. Unter dem selben Namen wird Jährlich die MiniZinc
-Challenge ausgetragen, in der ein Parkour von Constraint Modelen gelöst werden
-muss. Am Ende werden die Solver nach Anzahl der gelösten Modelle, der Zeit und
-der Qualität der Lösung bewertet. \cite{Homewe}. Gerade bei großen
-Problemstellungen oder wenn beispielweise in der Forschung oft üblich, mehrere
-Lösung oder Besondere Ansprüche an die Qualität und Genauigkeit der Lösung
-gestellt werden kann die Ausführung oft lange dauern, weshalb die benötigte Zeit
-der Solver von großer Bedeutung ist. Die folgende Arbeit soll hierzu aktuelle
-Ansätze vorstellen mit denen CP Problme schneller gelöst werden können. 
+unterschiedliche Constraint Programming Ansätze verwendet werden. Es existieren
+verschiedene Toolsets, um Constraint Programming-Probleme zu lösen. Für das
+Vehicle Routing Problem, welches das Problem beschreibt, den kürzesten Gesamtweg
+für \( n \) Fahrzeuge und \( m \) Orte zu finden \cite[222]{labor18jo}, kann
+beispielsweise der IBM ILOG CP Optimizer verwendet werden \cite{IBMIwe}. Je nach
+Problemstellung gibt es eine Vielzahl weiterer Toolsets \cite{Solviwea}.
+OR-tools von Google ist eine weitere Möglichkeit zur Lösung von Constraint
+Programming (CP), Linear Programming (LP), Integer Programming (IP) und Boolean
+Satisfiability (SAT) Problemen \cite{ORToowe}. Geocode ist eine
+Open-Source-Variante basierend auf C++ \cite{GECODwe}, und Chuffed ist eine
+Variante, die "lazy clause generation" ausnutzt, um CP-Probleme schneller zu
+lösen \cite{Chuff24co}. MiniZinc vereint unter anderem die zuvor beschriebenen
+Softwarebibliotheken zu einer Ausdruckssprache zum Lösen einer Vielzahl von LP,
+Transportproblemen (TP) und SAT-Problemen \cite{MiniZwe}. Unter demselben Namen
+wird jährlich die MiniZinc Challenge ausgetragen, in der ein Parcours von
+Constraint-Modellen gelöst werden muss. Am Ende werden die Solver nach Anzahl
+der gelösten Modelle, der Zeit und der Qualität der Lösung bewertet
+\cite{Homewe}. Gerade bei großen Problemstellungen, oder wenn, wie in der
+Forschung oft üblich, mehrere Lösungen benötigt werden oder besondere Ansprüche
+an die Qualität und Genauigkeit der Lösung gestellt werden, kann die Ausführung
+oft lange dauern, weshalb die benötigte Zeit der Solver von großer Bedeutung
+ist. Die folgende Arbeit soll aktuelle Ansätze vorstellen, mit denen CP-Probleme
+schneller gelöst werden können.
 
-%\cite{keylist}
 
 \section{Grundlagen}
 \label{sec:Grundlagen}
-Grundlegend gibt es zwei Arten von Constraint Problemen, Constraint Satisfaction
-Probleme (CSP) und Constraint Optimization Problem (COP). Ein CSP beschreibt im
-wesentlichen ein Problem, bei dem Nebenbedingungen festlegen welche Werte die
-Variablen annehmen können. \cite[13]{rossi06bo} Ziel hierbei kann es entweder
-sein zu überprüfen ob eine Lösung existiert, eine mögliche Lösung zu finden oder
-die Menge aller möglichen Lösungen zu bestimmen. Ein COP ist eine Erweiterung
-des CSP, bei dem zusätzlich eine Zielfunktion minimiert werden müssen.
-\cite[171]{rossi06bo}. Ebeso kann es hierbei auch darum gehen zu überprüfen ob
-das Problem überhaupt lösbar ist, eine mögliche Lösung zu finden oder die
-optimale Lösung zu finden.
+Grundsätzlich gibt es zwei Arten von Constraint-Problemen: Constraint
+Satisfaction Probleme (CSP) und Constraint Optimization Probleme (COP). Ein CSP
+beschreibt im Wesentlichen ein Problem, bei dem Nebenbedingungen festlegen,
+welche Werte die Variablen annehmen können \cite[13]{rossi06bo}. Das Ziel
+hierbei kann es entweder sein zu überprüfen, ob eine Lösung existiert, eine
+mögliche Lösung zu finden oder die Menge aller möglichen Lösungen zu bestimmen.
+Ein COP ist eine Erweiterung des CSP, bei dem zusätzlich eine Zielfunktion
+minimiert werden muss \cite[171]{rossi06bo}. Ebenso kann es hierbei auch darum
+gehen zu überprüfen, ob das Problem überhaupt lösbar ist, eine mögliche Lösung
+zu finden oder die optimale Lösung zu finden.
 
 
 \subsection{Constraint Satisfaction Probleme}
-\label{sec: Constraint Satisfaction Probleme}
-Ein CSP lässt sich durch ein Tripel $P=(X,D,C)$ beschreiben, wobei $X=\langle
-x_{1},x_{2},\ldots,x_{n}\rangle$  ein n-Tupel von Variablen, $D=\langle
-D_{1},D_{2},\ldots,D_{n}\rangle$ ein n-Tupel von Domänen, so dass , so dass
-$x_i\in D_{i}$ erfüllt ist und $C=\langle C_1,C_2,\ldots,C_t\rangle$ eine Menge
-von Bedingungen beschreibt. Jede Bedindingung $C_j$ ist hierbei eine Untermenge
-des Cartesischen Produkts über $D$. Eine Lösung für ein CSP ist ein n-Tupel
-$A=\langle a_1,a_2,\ldots,a_n\rangle $ so dass $a_i\in D_i$ für alle $i$ und $A
-\in C_j \quad \forall j$ \todo{revisit Formula}. \cite[16]{rossi06bo} Ein
-Beispiel für ein CSP ist das oben beschriebene 3-SAT Problem. Das lösen eines
-3-SAT Problems ist NP-Vollständig, was bedeutet das es keine effiziente
-Algorithmus gibt, der das Problem in Polynomialzeit lösen kann.
-\cite[17]{rossi06bo}. Eine einfache Möglichkeint ein CSP zu lösen ist die
-Verwendung von Backtracking. Hierbei wird eine Variable nach der anderen belegt
-und bei einem Widerspruch wird ein Schritt zurückgegangen und eine andere
-Variable belegt. \cite[21]{rossi06bo} Interessant ist auch, dass  sich auch alle
-k>3-SAT Probleme auf ein 3-SAT Problem reduzieren lassen wodurch auch das k>3
-SAT Problem NP-Vollständig ist. \cite[206]{gritz13bo} Snd die Domänen der
-Variablen auf boolesche Werte beschränkt handelt es sich um ein Boolean
-Satisfiability  Problem (SAT).
+\label{sec:Constraint-Satisfaction-Probleme}
+
+Ein CSP lässt sich durch ein Tripel \(P=(X,D,C)\) beschreiben, wobei \(X=\langle
+x_{1},x_{2},\ldots,x_{n}\rangle\) ein n-Tupel von Variablen, \(D=\langle
+D_{1},D_{2},\ldots,D_{n}\rangle\) ein n-Tupel von Domänen ist, so dass \(x_i\in
+D_{i}\) erfüllt ist und \(C=\langle C_1,C_2,\ldots,C_t\rangle\) eine Menge von
+Bedingungen beschreibt. Jede Bedingung \(C_j\) ist hierbei eine Untermenge des
+kartesischen Produkts über \(D\). Eine Lösung für ein CSP ist ein n-Tupel
+\(A=\langle a_1,a_2,\ldots,a_n\rangle \), so dass \(a_i\in D_i\) für alle \(i\)
+und \(A \in C_j \quad \forall j\) \cite[16]{rossi06bo}. Ein Beispiel für ein CSP
+ist das oben beschriebene 3-SAT-Problem. Das Lösen eines 3-SAT-Problems ist
+NP-vollständig, was bedeutet, dass es keinen effizienten Algorithmus gibt, der
+das Problem in Polynomialzeit lösen kann \cite[17]{rossi06bo}. Eine einfache
+Möglichkeit, ein CSP zu lösen, ist die Verwendung von Backtracking. Hierbei wird
+eine Variable nach der anderen belegt, und bei einem Widerspruch wird ein
+Schritt zurückgegangen und eine andere Variable belegt \cite[21]{rossi06bo}.
+Interessant ist auch, dass sich auch alle \(k>3\)-SAT-Probleme auf ein
+3-SAT-Problem reduzieren lassen, wodurch auch das \(k>3\) SAT-Problem
+NP-vollständig ist \cite[206]{gritz13bo}. Sind die Domänen der Variablen auf
+boolesche Werte beschränkt, handelt es sich um ein Boolean Satisfiability
+Problem (SAT).
 
 
-\subsection{Constraint Optimization Problem}
-\label{sec: Constraint Optimization Problem}
-Viele Probleme in der echten Welt Welt suchen nicht nur eine Lösung, sondern die
+\subsection{Constraint Optimization Probleme}
+\label{sec:Constraint-Optimization-Probleme}
+
+Viele Probleme in der realen Welt suchen nicht nur eine Lösung, sondern die
 optimale Lösung. Solche Probleme lassen sich durch ein Constraint Optimization
 Problem modellieren. Hierzu wird die Problemstellung um eine Zielfunktion
-erweitert die minimiert oder maximiert werden soll. Ein COP lässt sich durch ein
-Tripel $P=(X,D,C,f)$ beschreiben, wobei die ersten drei Elemente wie bei einem
-CSP sind und $f$ eine Zielfunktion ist. \cite[22]{amadi15jo}. In der Physik oder
-den Ingenieurwissenschaften ist werden COP auch oft in Funktionsdarstellung
-beschrieben.
-\begin{align*}
-    &\text{minimize:} \quad f(x) \\
-    &\text{subject to:} \\
+erweitert, die minimiert oder maximiert werden soll. Ein COP lässt sich durch
+ein Tripel \(P=(X,D,C,f)\) beschreiben, wobei die ersten drei Elemente wie bei
+einem CSP sind und \(f\) eine Zielfunktion ist \cite[22]{amadi15jo}. In der
+Physik oder den Ingenieurwissenschaften werden COP oft auch in
+Funktionsdarstellung beschrieben.
+
+\[
+\begin{aligned}
+    &\text{minimiere:} \quad f(x) \\
+    &\text{unter der Bedingung:} \\
     &\quad g_j(x) \leq 0 \\
     &\quad h_l(x) = 0 \\
     &\quad \underline{x_i} \leq x_i \leq \overline{x_i}
-\end{align*}
-Hierbei beschreibt $g_j(x)$ und $h_l(x)$ die Nebenbedingungen $C$, wobei
-ersteres eine Ungleichungsrestriktionen und letzteres eine Gleichungsrestriktion
-darstellt. Die letzte Gleichung beschreibt die Domäne $D$ der Variablen.
-\cite[154]{marti21bo}. Je nach Art der Probemstellung unterscheiden sich die
-verwendeten Algorithmen. Sind beispielseise die Nebenbedingungen und die
-Zielfunktion linear handelt es sich um ein Linear Programming Problem (LP).
-Dieses lässt sich beispielseise mit dem Simplex Algorithmus lösen. Das Verfahren
-beruht darauf dass die Nebenbedingungen einen n-dimensionalen Polyeder
-aufspannen und die optimale Lösung auf einer Ecken des Polyeders liegt. Der
-Simplex Algorithmus sucht nun nun nacheinander die Ecken ab bis die optimale
+\end{aligned}
+\]
+
+Hierbei beschreiben \(g_j(x)\) und \(h_l(x)\) die Nebenbedingungen \(C\), wobei
+erstere eine Ungleichungsrestriktion und letztere eine Gleichungsrestriktion
+darstellt. Die letzte Gleichung beschreibt die Domäne \(D\) der Variablen
+\cite[154]{marti21bo}. Je nach Art der Problemstellung unterscheiden sich die
+verwendeten Algorithmen. Sind beispielsweise die Nebenbedingungen und die
+Zielfunktion linear, handelt es sich um ein Linear Programming Problem (LP).
+Dieses lässt sich beispielsweise mit dem Simplex-Algorithmus lösen. Das
+Verfahren beruht darauf, dass die Nebenbedingungen einen n-dimensionalen
+Polyeder aufspannen und die optimale Lösung auf einer Ecke des Polyeders liegt.
+Der Simplex-Algorithmus sucht nun nacheinander die Ecken ab, bis die optimale
 Lösung gefunden wurde. Beschränkt man sich bei den Lösungen auf ganzzahlige
-Werte Spricht man von einem Integer Programming Problem (IP). Diese lassen sich 
-mit dem Branch-and-Bound Algorithmus lösen. \cite{dakin65jo}
-\cite[99]{hofst07bo}
+Werte, spricht man von einem Integer Programming Problem (IP). Diese lassen sich
+mit dem Branch-and-Bound-Algorithmus lösen \cite{dakin65jo}
+\cite[99]{hofst07bo}.
+
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.5\textwidth]{figures/Simplex.PNG}
-    \caption{Polyeder beschreibt Nebenbedingungen, Gestrichelte Linie die
-    Zielfunktion,  Ecken sind mögliche Lösungen \cite[100]{hofst07bo}}
+    \caption{Der Polyeder beschreibt die Nebenbedingungen, gestrichelte Linie
+    die Zielfunktion, Ecken sind mögliche Lösungen \cite[100]{hofst07bo}}
     \label{fig:bild}
 \end{figure}
+
 Oft lassen sich Probleme jedoch nur über nichtlineare Zusammenhänge beschreiben.
-Eine Möglichkeit solche Probleme zu lösen ist die Verwendung von
-Gradientenverfahren. \cite[153]{marti21bo}. Ein Problem bei der Verwendung von
-diesen ist jedoch, dass sie je nach Initialisierung oft nur lokale Minima
-finden. \cite[9]{boyd04bo}. Ein Ansatz um dieses Problem zu umgehen ist die
-Verwendung von konvexen Funktionen. Dabei wird die nichtlineare Funktion durch
-eine konkave Zielfunktion approximiert. \cite[11]{boyd04bo} Dies ist von
-Vorteil, da konvexe Funktionen nur ein lokales Minimum haben.
-\cite[7]{noced06bo}. Durch die einfachere Lösbarkeit von konvexen
-optimierungsproblemen, spielen Sie auch in der Literatur eine wichtig Rolle.
-\cite[8]{boyd04bo}. 
+Eine Möglichkeit, solche Probleme zu lösen, ist die Verwendung von
+Gradientenverfahren \cite[153]{marti21bo}. Ein Problem bei der Verwendung dieser
+ist jedoch, dass sie je nach Initialisierung oft nur lokale Minima finden
+\cite[9]{boyd04bo}. Ein Ansatz, um dieses Problem zu umgehen, ist die Verwendung
+von konvexen Funktionen. Dabei wird die nichtlineare Funktion durch eine konkave
+Zielfunktion approximiert \cite[11]{boyd04bo}. Dies ist von Vorteil, da konvexe
+Funktionen nur ein lokales Minimum haben \cite[7]{noced06bo}. Durch die
+einfachere Lösbarkeit von konvexen Optimierungsproblemen spielen sie auch in der
+Literatur eine wichtige Rolle \cite[8]{boyd04bo}.
 
 
-\section{Recent Approaches To Accelerate Constraint programms}
-\label{sec:Recent Approaches To Accelerate Constraint programms}
+\section{Recent Approaches To Accelerate Constraint Programs}
+\label{sec:Recent-Approaches-To-Accelerate-Constraint-Programs}
 
 
 \subsection{Portfolio Ansätze}
-\label{sec:Portfolio Ansätze}
-Die Idee hinter Portfolio Ansätzen ist es, mehrere Solver zu kombinieren um so
-die Performance zu steigern. Es gibt verschiedene Ansätze wie die Solver dabei 
-kombiniert werden können. Zum einen besteht die Möglichkeit die Solver statisch
-festzugegen als auch dynamisch zu wählen. Weiter besteht die Möglichkeit des
-Automatischem Parameter Tuning, bei dem die Parameter der Solver automatisch an 
-das Problem angepasst werden. \cite[8-11]{kotth12jo}. Eine weitere Fragestellung
-ist die Wahl der Solver und wann dieser eingesetzt werden soll. Der am weiesten
-verbreitet ansatz ist einen einzelnen Solver zu beginn der Laufzeit zu wählen
-und für das ganze Problem zu verwenden. Es gibt jedoch auch Ansätze die den
-Solver zu Laufzeit wechseln oder auch mehrere Solver aus dem Portfolio
-gleichzeitig verwenden. \cite[11-14]{kotth12jo}. Das Hauptproblem besteth jedoch
-in der Richtigen Wahl des Solvers. Während in den Anfängen die Algorithmen nach
-Handgewählten Kriterien ausgewählt wurden, werden heute oft Automatische Ansätze
-verwendet. Dazu Zählen Lazy Approches, wie das Abspeichern von Fallbeispielen
-oder Nearest-Neighbor Ansätze. Auch wurden schon Klassifikatroen,
-Entscheidungsbäume Support Vector Machines sowie Neuronale Netze verwendet.
+\label{sec:Portfolio-Ansätze}
+
+Die Idee hinter Portfolio Ansätzen ist es, mehrere Solver zu kombinieren, um so
+die Performance zu steigern. Es gibt verschiedene Ansätze, wie die Solver dabei
+kombiniert werden können. Zum einen besteht die Möglichkeit, die Solver statisch
+festzulegen, als auch dynamisch zu wählen. Weiter besteht die Möglichkeit des
+Automatischen Parameter-Tunings, bei dem die Parameter der Solver automatisch an
+das Problem angepasst werden \cite[8-11]{kotth12jo}. Eine weitere Fragestellung
+ist die Wahl der Solver und wann dieser eingesetzt werden soll. Der am weitesten
+verbreitete Ansatz ist, einen einzelnen Solver zu Beginn der Laufzeit zu wählen
+und für das ganze Problem zu verwenden. Es gibt jedoch auch Ansätze, die den
+Solver zur Laufzeit wechseln oder auch mehrere Solver aus dem Portfolio
+gleichzeitig verwenden \cite[11-14]{kotth12jo}. Das Hauptproblem besteht jedoch
+in der richtigen Wahl des Solvers. Während in den Anfängen die Algorithmen nach
+handgewählten Kriterien ausgewählt wurden, werden heute oft automatische Ansätze
+verwendet. Dazu zählen Lazy Approaches, wie das Abspeichern von Fallbeispielen
+oder Nearest-Neighbor Ansätze. Auch wurden schon Klassifikationen,
+Entscheidungsbäume, Support Vector Machines sowie Neuronale Netze verwendet.
+
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.5\textwidth]{figures/Neuronal Nework to choose Solver [popes22jo]}
-    \caption{Verwendung eines Neuronalen Netzes zur Wahl eines Solvers \cite[105]{popes22jo}}
+    \includegraphics[width=0.5\textwidth]{figures/Neuronal Nework to choose Solver [popes22jo].PNG}
+    \caption{Verwendung eines Neuronalen Netzes zur Wahl eines Solvers
+    \cite[105]{popes22jo}}
     \label{fig:bild}
 \end{figure}
-Bei den Learning Ansätze besteht jedoch das Problem, dass ein ein großer
-Trainingsdatensatz benötigt wird.\cite[15-16]{kotth12jo} Eine weitere Ansatz
-besteth darin ein Performance Modell der Solver zu lernen. Hierduch kann einfach
-ein neuer Solver in das Portfolio aufgenommen werden, da die Modelle für die
-bestehenden Solver nicht neu gelernt werden müssen. \cite[18]{kotth12jo}
-Als Feature für die Modelle können beispielsweise die Anzahl der Variablen, die
-Anzahl der Constraints, die Dömäne der Variablen oder Verhältnis der vorherigen
-Eigenschaften verwendet werden. \cite[22]{kotth12jo} Ein Beispiel für einen
-Portfolio Solver ist der Sunny-Cp solve, welcher einen laly k-Nearest-Neighbor 
-zur Auswahl eines Solver Sets verwendet. \cite[4]{amadi15jo}
+
+Bei den Learning Ansätzen besteht jedoch das Problem, dass ein großer
+Trainingsdatensatz benötigt wird \cite[15-16]{kotth12jo}. Eine weitere
+Möglichkeit besteht darin, ein Performance-Modell der Solver zu lernen. Dadurch
+kann einfach ein neuer Solver in das Portfolio aufgenommen werden, da die
+Modelle für die bestehenden Solver nicht neu gelernt werden müssen
+\cite[18]{kotth12jo}. Als Features für die Modelle können beispielsweise die
+Anzahl der Variablen, die Anzahl der Constraints, die Domäne der Variablen oder
+Verhältnisse der vorherigen Eigenschaften verwendet werden \cite[22]{kotth12jo}.
+Ein Beispiel für einen Portfolio Solver ist der Sunny-Cp-Solver, welcher einen
+lazy k-Nearest-Neighbor zur Auswahl eines Solver-Sets verwendet
+\cite[4]{amadi15jo}.
 
 
-\subsection{Model Based Optization}
-\label{sec:Model Based Optization}
-Sollte die Opjektive Funktion nicht bekannt sein und die Auswertung des
-Blackbox-Modells teuer sein, kann Model Based Optization verwendet werden, um
-die Optimierung zu beschleunigen. Hierbei wird amhamd eine kleinen Anzahl von 
-Auswertungen ein Modell der Black-box erstellt und dieses Modell wird 
-dann für die Optimierung verwendet. Auf diesem wird bis ein bestimmtes Budget,
-beispielseise Schritte oder delta Wert erreicht wird. Mit diesem wird dann durch
-Auswertung der Blackbox das Ergebnis bestimmt welches entweder verwendet um das
-Modell zu verfeinern oder es wird als Endresultat ausgegeben.
-\cite[4]{bisch18pr}
+\subsection{Model Based Optimization}
+\label{sec:Model-Based-Optimization}
+
+Sollte die objektive Funktion nicht bekannt sein und die Auswertung des
+Blackbox-Modells teuer sein, kann Model Based Optimization verwendet werden, um
+die Optimierung zu beschleunigen. Hierbei wird zunächst anhand einer kleinen
+Anzahl von Auswertungen ein Modell der Blackbox erstellt, und dieses Modell wird
+dann für die Optimierung verwendet. Auf diesem wird solange gearbeitet, bis ein
+bestimmtes Budget, beispielsweise Schritte oder ein Delta-Wert, erreicht wird.
+Mit diesem wird dann durch Auswertung der Blackbox das Ergebnis bestimmt,
+welches entweder verwendet wird, um das Modell zu verfeinern, oder es wird als
+Endresultat ausgegeben \cite[4]{bisch18pr}.
 
 
-\subsection{Automated Parameter Tuning }
-\label{sec:Automated Parameter Tuning }
-Ein weiterer Ansatz um die Performance von Solvern zu steigern ist das Automated
-Parameter Tuning. Hierbei werden die Parameter der Solver automatisch an das
-Problem angepasst.
-$\lambda^{*}\in\mathop{\mathrm{argmax}}p(\mathcal{A}_{\lambda},\mathcal{D})$
-\todo{make it aligend}
-Hierbei beschreibt $\lambda$ die Parameter des Algorithmus, $\mathcal{A}$ den
-Algorithmus und $\mathcal{D}$ die Domäne. Lambda* beschreibt die optimalen 
-Parameter für das Problem.
-Die Funktionweise des Parameter Tuning ist Iterativ. Grundbaustein ist ein
-Konfigurator, welcher die Parameter des Algorithmus anpasst. Initial werden dem
-Konfigurator die Parameter und die Domäne übergeben. Der Konfigurator probiert
-verschiedene Konfigurationen aus und übergibt Sie dem Zielalgorithmus. Der
-Algorithmus wird auf des Problem angewendet und gibt in Form einer
-Kostenfunktion an wie gut die Konfiguration war. Der Konfigurator passt iterativ
-auf basis der Kostenfunktion die Parameter an. \cite[31-38]{kotth23pr}
+\subsection{Automated Parameter Tuning}
+\label{sec:Automated-Parameter-Tuning}
+
+Ein weiterer Ansatz, um die Performance von Solvern zu steigern, ist das
+Automated Parameter Tuning. Hierbei werden die Parameter der Solver automatisch
+an das Problem angepasst:
+
+\[
+\lambda^{*} \in \arg\max p(\mathcal{A}_{\lambda}, \mathcal{D})
+\]
+
+Hierbei beschreibt \(\lambda\) die Parameter des Algorithmus, \(\mathcal{A}\)
+den Algorithmus und \(\mathcal{D}\) die Domäne. \(\lambda^{*}\) beschreibt die
+optimalen Parameter für das Problem. Die Funktionsweise des Parameter Tunings
+ist iterativ. Grundbaustein ist ein Konfigurator, welcher die Parameter des
+Algorithmus anpasst. Initial werden dem Konfigurator die Parameter und die
+Domäne übergeben. Der Konfigurator probiert verschiedene Konfigurationen aus und
+übergibt sie dem Zielalgorithmus. Der Algorithmus wird auf das Problem
+angewendet und gibt in Form einer Kostenfunktion an, wie gut die Konfiguration
+war. Der Konfigurator passt iterativ auf Basis der Kostenfunktion die Parameter
+an \cite[31-38]{kotth23pr}.
+
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.5\textwidth]{figures/Automated Parameter Tuning [kotth23pr]}
-    \caption{Illustration of the parameter tuning process. \cite[34]{kotth23pr}}
+    \includegraphics[width=0.5\textwidth]{figures/Automated Parameter Tuning [kotth23pr].PNG}
+    \caption{Illustration des Parameter-Tuning-Prozesses \cite[34]{kotth23pr}}
     \label{fig:bild}
 \end{figure}
+
 Die Suche nach den optimalen Parametern kann entweder durch Grid Search oder
 durch Random Search erfolgen. Bei der Grid Search werden die Parameter
 systematisch abgedeckt. Bei der Random Search werden die Parameter zufällig
 ausgewählt. Grid Search ist oft ineffizient, da eine große Anzahl von
-unwichtigen Parameterkombinationen getestet werden. Dfür ist es aber
-unwahrscheinlich das ein relevanter Bereich ausgelassen wird. Random Search 
-getestet werden müssen. Dafür Arbeitet Grid Search oft schneller, da mehr
-relevante Parameterkombinationen getestet werden. \cite[39]{kotth23pr}
+unwichtigen Parameterkombinationen getestet werden. Dafür ist es aber
+unwahrscheinlich, dass ein relevanter Bereich ausgelassen wird. Random Search
+testet hingegen relevante Parameterkombinationen, jedoch auf zufällige Weise.
+Dafür arbeitet Grid Search oft schneller, da mehr relevante
+Parameterkombinationen getestet werden \cite[39]{kotth23pr}.
+
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.5\textwidth]{figures/Grid Search vs. Random Search [kotth23pr]}
+    \includegraphics[width=0.5\textwidth]{figures/Grid Search vs. Random Search [kotth23pr].PNG}
     \caption{Grid Search und Random Search \cite[39]{kotth23pr}}
     \label{fig:bild}
 \end{figure}
-Ein weiterer Ansatz ist Local Search, bei dem eine Einzelner Parameter iterativ
+
+Ein weiterer Ansatz ist Local Search, bei dem ein einzelner Parameter iterativ
 angepasst wird. Hierbei wird ein einzelner Parameter ausgewählt und verändert.
-Falls die Veränderung zu einer Verbesserung führt wird der Parameter behalten
-ansonten verworfen.
+Falls die Veränderung zu einer Verbesserung führt, wird der Parameter behalten,
+ansonsten verworfen.
 
-
-%\subsection{Qunatum Acceleratedt}
-%\label{sec:Qunatum Accelerated}
+%\subsection{Qunatum Acceleratedt} \label{sec:Qunatum Accelerated}
 
   
-\subsection{Combine CP and SAT}
-\label{sec:Combine CP and SAT}
-Ein weiterer Ansatz um CP Probleme zu beschleunigen ist die Kombination von CP. 
-Hiezu wir die sogenannte Lazy Clause Generation verwendet. Diese Methode wandelt
-die Constraints eines CP Problems in SAT Klauseln um. Diese Klauseln werden
-nicht im voraus generiert, sondern erst wenn sie benötigt werden. Durch die
-verwendung von SAT Solvern können die Klauseln schneller gelöst werden. Wenn es
-bei der Lösung eines SAT Problems zu einem Konflikt kommt, wird eine Klausel dem
-Solver hinzu gefügt. Durch diese Kombination werden die Stärken von CP (z.B.
-feinkörnige Domänenreduktion) und SAT (z.B. leistungsstarke Konfliktlösung und
-Backtracking) optimal genutzt, was zu einem effizienteren und leistungsfähigeren
-Solver führt. \cite[5]{goosjo} Ein Beispiel für einen Solver der diese Methode
-Verwendet ist der Chuffed Solver \cite{Chuff24co}
+\subsection{Kombination von CP und SAT}
+\label{sec:Kombination-von-CP-und-SAT}
+
+Ein weiterer Ansatz, um CP-Probleme zu beschleunigen, ist die Kombination von CP
+mit SAT. Hierzu wird die sogenannte Lazy Clause Generation verwendet. Diese
+Methode wandelt die Constraints eines CP-Problems in SAT-Klauseln um. Diese
+Klauseln werden nicht im Voraus generiert, sondern erst, wenn sie benötigt
+werden. Durch die Verwendung von SAT Solvern können die Klauseln schneller
+gelöst werden. Wenn es bei der Lösung eines SAT-Problems zu einem Konflikt
+kommt, wird eine Klausel dem Solver hinzugefügt. Durch diese Kombination werden
+die Stärken von CP (z. B. feinkörnige Domänenreduktion) und SAT (z. B.
+leistungsstarke Konfliktlösung und Backtracking) optimal genutzt, was zu einem
+effizienteren und leistungsfähigeren Solver führt \cite[5]{goosjo}. Ein Beispiel
+für einen Solver, der diese Methode verwendet, ist der Chuffed Solver
+\cite{Chuff24co}.
 
 
   
-%\subsection{Decompostion methods}
-%\label{sec:Decompostion methods}
+%\subsection{Decompostion methods} \label{sec:Decompostion methods}
 
   
 
-\section{Evaluation Performance Increase}
-\label{sec:Evaluation Performance Increase}
-Zur Bewertung der Leistungssteigerungen wurden verschiedene Solver und Methoden
-auf Benchmark-Probleme angewendet. 
-Portfolio-Ansätze, die mehrere Solver kombinieren, zeigten erhebliche
-Verbesserungen. Dynamische Portfolios, die zur Laufzeit den besten Solver
-wählen, konnten die Lösungsgeschwindigkeit oft verdoppeln oder verdreifachen.
-Der Sunny-Cp Solver erzielte dabei die besten Ergebnisse.
-Model-Based Optimization (MBO) führte zu beeindruckenden Verbesserungen bei
-teuren Zielfunktionen, indem die Anzahl der Blackbox-Auswertungen um bis zu 70 \%
-reduziert wurde.
-Automatisiertes Parametertuning erwies sich als effektiv, mit
-Leistungssteigerungen von bis zu 50 \% durch die iterative Anpassung der
-Solver-Parameter. Grid Search deckte systematisch alle Parameterkombinationen
-ab, während Random Search schneller relevante Kombinationen fand.
-Die Kombination von Constraint Programming und SAT, insbesondere durch Lazy
-Clause Generation, beschleunigte die Lösung von CP-Problemen erheblich. Der
-Chuffed Solver konnte die Lösungsgeschwindigkeit um bis zu 60 \% erhöhen.
-Insgesamt bieten alle vorgestellten Ansätze signifikante Leistungssteigerungen,
-wobei Portfolio-Ansätze und die Kombination von CP und SAT die höchsten
-Verbesserungen zeigten. Diese Techniken erhöhen die Effizienz und Effektivität
-von Constraint Programming, was besonders bei großen und komplexen
-Problemstellungen wichtig ist. 
+\section{Schluss}
+\label{sec:Schluss}
+DDie vorgestellten Ansätze zur Beschleunigung von Constraint Programming (CP)
+bieten vielfältige Möglichkeiten, die Leistungsfähigkeit von CP-Systemen zu
+verbessern und damit die Lösung komplexer Probleme effizienter zu gestalten.
+
+Portfolio-Ansätze zeigen, dass die Kombination mehrerer Solver eine
+vielversprechende Strategie ist, um die Leistung zu steigern. Die dynamische
+Auswahl oder die Kombination verschiedener Solver je nach Problemstellung kann
+zu verbesserten Ergebnissen führen. Model Based Optimization und Automated
+Parameter Tuning bieten weitere Wege, um die Effizienz von CP zu erhöhen, indem
+Modelle verwendet oder Parameter automatisch angepasst werden.
+
+Die Kombination von CP und SAT sowie die Nutzung von Lazy Clause Generation
+stellen ebenfalls vielversprechende Ansätze dar, um die Leistung von CP-Systemen
+zu steigern. Durch die Integration der Stärken beider Ansätze können komplexe
+Probleme effizienter gelöst werden.
+
+Es wird jedoch deutlich, dass es keinen universellen Ansatz gibt, um CP-Probleme
+zu beschleunigen, da die Effektivität der Methoden stark von der spezifischen
+Problemstellung abhängt. Vielmehr ist ein ganzheitlicher Ansatz erforderlich,
+der die Auswahl und Kombination verschiedener Techniken je nach Problemstellung
+und Ressourcen ermöglicht.
+
+Die fortlaufende Forschung und Entwicklung auf diesem Gebiet verspricht, die
+Leistungsfähigkeit von CP-Systemen weiter zu verbessern und ihre Anwendbarkeit
+auf eine Vielzahl komplexer realer Probleme zu erweitern.
+
+Es ist anzumerken, dass die vorgestellten Ansätze nur einen Teil des breiten
+Spektrums der Forschung im Bereich der Beschleunigung von Constraint Programming
+darstellen. Zukünftige Innovationen könnten auch durch neue Technologien wie
+Quantum Computing beeinflusst werden.
+
+Insgesamt bleibt die Optimierung von CP-Systemen ein aktives und vielschichtiges
+Forschungsfeld, das weiterhin großes Potenzial für Innovationen und Fortschritte
+bietet.
 
 
 % Literaturverzeichnis
