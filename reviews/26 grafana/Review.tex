@@ -1,0 +1,146 @@
+\documentclass[a4paper,DIV=16]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[german]{babel}
+
+\usepackage[sfdefault]{FiraSans}
+\usepackage{FiraMono}
+\usepackage{url}
+\usepackage{xcolor}
+\definecolor{smdsblue}{RGB}{0, 69, 134}
+\usepackage{local_style}
+
+\pagestyle{empty}
+
+\begin{document}
+\title{Review Seminararbeit}
+\date{SoSe 2024}
+
+%% >> Bitte entsprechend Ihres EIGENEN Seminars ausfüllen! % --- 8< --- 8< ---
+%8< --- \subtitle{\todo[inline]{Bitte die richtige Lehrveranstaltung
+%einkommentieren}} \subtitle{Seminar Machine Learning}
+\subtitle{Seminar Software Engineering für verteilte Systeme}
+%\subtitle{Seminar Software Engineering in sicherheitskritischen Systemen} % ---
+%>8 --- >8 --- >8 ---
+
+% >> Bitte "\personal{...}" stehen lassen und nur den Inhalt "\todo[......" mit
+% >> ihrem Namen ersetzen. Dieses Kommando wird später zur Anonymisierung
+% >> genutzt. 
+\author{\personal{{Daniel Sturm (1453079)}}}
+
+\maketitle
+\thispagestyle{empty}
+
+\section*{Hinweise}
+\begin{itemize}
+\item Länge des Reviews: 2--3 Seiten (inklusive dieser Hinweise)
+\item Jede Frage in diesem Template muss beantwortet werden! \textbf{Ersetzen}
+Sie dazu die vorhandenen \texttt{\textbackslash{}todo}-Befehle im Template durch
+Ihre Antworten in Fließtext oder ausführlichen Stichpunkten.
+\item Die Qualität der von Ihnen verfassten Reviews geht in Ihre Gesamtnote für
+das Seminar ein.
+\item Entfernen Sie nach dem vollständigen Bearbeiten des Reviews das
+\texttt{todonotes}-Paket im Header dieser Datei. Wenn Sie alle
+\texttt{\textbackslash{}todo}-Befehle ersetzt haben, kompiliert das Dokument
+weiterhin ohne Fehler.
+\texttt{\textbackslash{}usepackage[color=smdsblue!25]{todonotes}}
+\end{itemize}
+
+\section*{Allgemeine Informationen}
+\subsection*{Titel der zu bewertenden Arbeit}
+
+Grafana: Sicherheitsaspekte in verteilten Systemen - Herausforderungen und
+Maßnahmen
+
+\section*{Hauptinhalt der Arbeit}
+Zu Beginn der Arbeit wird ein Überblick über Grafana gegeben. Hierbei wird das
+Open-Source-Tool zur Visualisierung und Überwachung von IT-Systemen vorgestellt.
+Besonders hervorgehoben werden dabei die Integration von verteilten Datenquellen
+über diverse Datenbanken sowie die Möglichkeit zur Erstellung von Alerts. Zum
+Ende der Einleitung wird die Zielsetzung der Arbeit mit der Frage nach den
+Sicherheitsaspekten von Grafana in verteilten Systemen formuliert.
+
+Im zweiten Kapitel werden die benötigten Grundlagen über Cyber Security und
+verteilte Systeme beschrieben. Hierzu wird zuerst auf das CIA-Triad sowie auf
+die ISO/IEC 27001 als Basis für Informationssicherheit eingegangen. Anschließend
+wird die Relevanz von Cyber Security insbesondere für Grafana, als ein
+verteiltes System mit Zugriff auf viele Datenquellen, erläutert.
+
+Im weiteren Verlauf der Arbeit werden die Sicherheitsfunktionen von Grafana
+erläutert. Hierbei wird zuerst auf das Identity and Access Management (IAM)
+eingegangen. Ein wichtiger Bestandteil hierbei ist der Schutz der Datenquellen
+sowie der Dashboards. Die Verschlüsselung von Datenbanken sowie das Auditing
+stellen weitere wichtige Sicherheitsfunktionen dar. Außerdem bietet Grafana die
+Möglichkeit zum Blacklisting zur Verhinderung von DDoS-Angriffen sowie die
+Möglichkeit des Abgleichs von möglicherweise geleakten Service-Tokens.
+Allgemeine Sicherheitsmaßnahmen wie das regelmäßige Updaten von Grafana, Backups
+und verschlüsselte Kommunikation spielen selbstverständlich auch eine wichtige
+Rolle.
+
+Zur Evaluation der Sicherheitsaspekte von Grafana wird die Open-Source-Version
+mit der Cloud-/Enterprise-Version verglichen. Essenziell ist hierbei, dass
+gerade bei der Nutzung durch viele Benutzer essenzielle  Sicherheitsfunktionen
+wie Berechtigungen für Datenquellen, Key Management Service, Audit Logging und
+automatische Updates nur in der kostenpflichtigen Version verfügbar sind.
+
+\section*{Allgemeine Bewertung}
+
+\subsection*{Stärken der Arbeit}
+
+\begin{itemize}
+  \item Gute Einleitung in das Thema Grafana und enges Arbeiten an der
+  Grafana-Dokumentation.
+  \item Gut beschrieben, warum die Sicherheit von Grafana wichtig ist (viele
+  Datenquellen, DDoS, Single Point of Failure).
+  \item Klar gegliederter Aufbau der Maßnahmen und Herausforderungen.
+\end{itemize}
+
+
+\subsection*{Schwächen der Arbeit}
+
+\begin{itemize}
+  \item Schon in der Einleitung das Ziel der Evaluation zwischen kostenloser und
+  kostenpflichtiger Version beschreiben.
+  \item Ist die Enterprise-Version dann sicher oder hat sie auch noch Schwächen?
+  \item Penetrationstests oder Ansätze zur Umgehung von Sicherheitsmaßnahmen
+  wären interessant.
+  \item Genauer auf sichere Kommunikation eingehen (Protokolle wie HTTPS genauer
+  erläutern, wie erfolgt der Zugriff auf die Daten, eventuell Fallbeispiel von
+  verteilten Systemen einbeziehen).
+\end{itemize}
+
+
+\subsection*{Nutzung KI-basierter Tools}
+Meine Meinung nach kam kein KI-basiertes Tools höchstens zur Rechtschreibprüfung und
+Grammatikprüfung zum Einsatz, was sich aber nicht nachweisen lässt.
+  
+
+\section*{Sachliche Korrektheit}
+  Die sachliche Korrektheit ist gegeben. Es wird im Wesentlichen auf Grafana
+  Labs (die offzielle Dokumentation) verwiesen. Der Nutzerbericht ist in der
+  Arbeit klar als solcher gekennzeichnet.
+
+\section*{Äußere Form}
+  \begin{itemize}
+    \item Präzise Wortwahl: "`Auditing in Grafana bezieht sich auf den Prozess
+    der Überwachung und Aufzeichnung von Aktivitäten, die in Grafana
+    stattfinden."' (Seite 4)
+    \item Korrekte Verwendung von Fachterminologie: "`Grafana bietet
+    verschiedene Authentifizierungsmethoden, um einen sicheren Zugriff auf die
+    Plattform zu gewährleisten. Dazu gehören die Authentifizierung über
+    Benutzername und Passwort, SAML, OAuth und mehr."' (Seite 3)
+    \item Korrekte Kommasetzung: "`Ein weiteres wesentliches Element der
+    Sicherheit ist die Datenbankverschlüsselung, wobei das regelmäßige Rotieren
+    der Schlüssel meist ausreichend ist."' (Seite 6)
+    \item Einteilung und roter Faden sind ersichtlich und gut strukturiert:
+    Vorstellung => Relevanz => Herausforderungen => Maßnahmen =>  Evaluation =>
+    Schluss
+    \item Angemessene Verwendung von Abbildungen: Abbildung 1 (Grafana-Beispiel)
+    ist gut für die Vorstellung; Tabelle 1 ist sinnvoll für die Evaluation
+    \item Abbildungen und Tabellen sind gut beschriftet
+    \item Abbildungen und Tabellen werden im Fließtext referenziert
+    \item Das Erscheinungsbild ist gut
+  \end{itemize}
+  
+\end{document}

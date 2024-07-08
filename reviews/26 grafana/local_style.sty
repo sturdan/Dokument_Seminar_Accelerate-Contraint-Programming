@@ -1,0 +1,7 @@
+%%%%% FLAG FOR DOUBLE-BLIND REVIEW
+\usepackage{etoolbox}
+\newbool{ReviewVersion}
+\setbool{ReviewVersion}{false}
+\ifbool{ReviewVersion}
+    {\newcommand{\personal}[1]{\colorbox{black}{\phantom{#1}}}}
+    {\newcommand{\personal}[1]{#1}}

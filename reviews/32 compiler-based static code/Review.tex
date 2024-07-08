@@ -1,0 +1,178 @@
+\documentclass[a4paper,DIV=16]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[german]{babel}
+
+\usepackage[sfdefault]{FiraSans}
+\usepackage{FiraMono}
+\usepackage{url}
+\usepackage{xcolor}
+\definecolor{smdsblue}{RGB}{0, 69, 134}
+\usepackage{local_style}
+
+\pagestyle{empty}
+
+\begin{document}
+\title{Review Seminararbeit}
+\date{SoSe 2024}
+
+%% >> Bitte entsprechend Ihres EIGENEN Seminars ausfüllen! % --- 8< --- 8< ---
+%8< --- \subtitle{\todo[inline]{Bitte die richtige Lehrveranstaltung
+%einkommentieren}} \subtitle{Seminar Machine Learning}
+\subtitle{Seminar Software Engineering für verteilte Systeme}
+%\subtitle{Seminar Software Engineering in sicherheitskritischen Systemen} % ---
+%>8 --- >8 --- >8 ---
+
+% >> Bitte "\personal{...}" stehen lassen und nur den Inhalt "\todo[......" mit
+% >> ihrem Namen ersetzen. Dieses Kommando wird später zur Anonymisierung
+% >> genutzt. 
+\author{\personal{Daniel Sturm (1453079)}}
+
+\maketitle
+\thispagestyle{empty}
+
+\section*{Hinweise}
+\begin{itemize}
+\item Länge des Reviews: 2--3 Seiten (inklusive dieser Hinweise)
+\item Jede Frage in diesem Template muss beantwortet werden! \textbf{Ersetzen}
+Sie dazu die vorhandenen \texttt{\textbackslash{}todo}-Befehle im Template durch
+Ihre Antworten in Fließtext oder ausführlichen Stichpunkten.
+\item Die Qualität der von Ihnen verfassten Reviews geht in Ihre Gesamtnote für
+das Seminar ein.
+\item Entfernen Sie nach dem vollständigen Bearbeiten des Reviews das
+\texttt{todonotes}-Paket im Header dieser Datei. Wenn Sie alle
+\texttt{\textbackslash{}todo}-Befehle ersetzt haben, kompiliert das Dokument
+weiterhin ohne Fehler.
+\texttt{\textbackslash{}usepackage[color=smdsblue!25]{todonotes}}
+\end{itemize}
+
+\section*{Allgemeine Informationen}
+\subsection*{Titel der zu bewertenden Arbeit}
+
+State of the Art: Compiler-based Static Code Analysis
+
+\section*{Hauptinhalt der Arbeit}
+
+Zu Beginn der Arbeit wird die statische Codeanalyse als Mittel zur Verbesserung
+der Codequalität vorgestellt. Außerdem wird der Aufbau der Arbeit beschrieben.
+
+Im Kapitel „Softwaretesting“ wird aufgezeigt, dass es oft zu aufwendig ist,
+komplexe Software zu testen und dass man den Testumfang meist proportional zum
+möglichen Risiko wählt. Im Folgenden wird die statische Codeanalyse als
+Whitebox-Verfahren vorgestellt, bei dem der Code nicht ausgeführt wird. Bei der
+statischen Codeanalyse wird der Code neben der Syntax auch oft auf
+Programmierguidelines geprüft. Neben der manuellen Prüfung gibt es auch Tools,
+die einen Analysebericht erstellen. Hierbei wird auch der Unterschied zwischen
+falschen positiven und falschen negativen Fehlern hervorgehoben. Der Compiler
+lässt sich hierbei auch als statischer Codeanalysator betrachten.
+
+Im darauffolgenden Kapitel wird die statische Codeanalyse anhand eines
+C-Code-Beispiels mit typischen Fehlern vorgestellt. Außerdem werden die
+Datenflussanalyse und die Kontrollflussanalyse vorgestellt. Bei der
+Datenflussanalyse betrachtet man die Zustände der Variablen. Insbesondere wird
+erläutert, dass beispielsweise eine du-Anomalie, bei der eine Variable
+definiert, aber ihr kein Wert zugewiesen wird, nicht unbedingt zu einem Fehler
+führt, wenn die Variable nicht ausgelesen wird. Die Kontrollflussanalyse
+analysiert, wie der Name schon sagt, den Kontrollfluss des Programms. Dieser
+wird oft als Graph visualisiert. In einem Beispiel wird anhand eines solchen
+Graphen die zyklomatische Zahl eingeführt, welche ein Maß für die Komplexität
+des Codes ist.
+
+Weiter werden in der Arbeit FindBugs als ein Tool zur statischen Codeanalyse für
+Java, Snyk als KI-basiertes Tool, um Schwachstellen im Code zu finden, und
+SonarQube als Tool, welches Rückmeldung beim Coden gibt, vorgestellt.
+
+Im Kapitel „Herausforderungen“ wird noch einmal der hohe Aufwand der statischen
+Codeanalyse betont. Es wird darauf hingewiesen, dass trotz statischer
+Codeanalyse, z.B. für Logikfehler, noch die dynamische Codeanalyse benötigt wird
+und man auch trotz Tools immer noch auf falsche positive und falsche negative
+Fehler sowie auf deren Kommentierung achten muss.
+
+Zum Schluss wird ein Ausblick in die Zukunft gegeben, in welchem die Fehler der
+statischen Codeanalyse durch KI-Tools analysiert werden können. Allgemein wird
+festgehalten, dass die Codequalität durch die statische Codeanalyse gesteigert
+wird und früh gefundene Fehler Kosten sparen.
+
+
+
+
+
+
+
+\section*{Allgemeine Bewertung}
+
+\subsection*{Stärken der Arbeit}
+
+\begin{itemize}
+  \item Klar strukturierter Aufbau: Einleitung, Grundlagen, praktische
+  Beispiele, Herausforderungen, Ausblick
+  \item Gute Erklärung von falsch positiven und falsch negativen Fehlern
+  \item Praktische Beispiele im Kapitel „Softwaretesting“
+\end{itemize}
+
+
+
+\subsection*{Schwächen der Arbeit}
+\begin{itemize}
+  \item Kapitel 3
+  \begin{itemize}
+      \item Tools FindBugs, SonarQube und Snyk werden nur oberflächlich
+      behandelt
+      \begin{itemize}
+          \item Was genau ist Snyk? Name des Unternehmens? Welches Tool von Snyk
+          soll genau betrachtet werden?
+      \end{itemize}
+      \item Einzelne Tools genauer vorstellen
+      \begin{itemize}
+          \item Eventuell Anwendungsbeispiele eines oder mehrerer Tools
+      \end{itemize}
+      \item Wie verwenden die Tools die Datenflussanalyse und
+      Kontrollflussanalyse?
+  \end{itemize}
+  \item Kapitel 4
+  \begin{itemize}
+      \item Beispiel für hohen Aufwand geben
+      \item Ist neben der Anzahl und Auswertung der Fehler nicht auch die
+      Rechenzeit der Analyse bei komplexen Programmen relevant?
+  \end{itemize}
+  \item Zukunftsausblick
+  \begin{itemize}
+      \item KI-Tool? Welches genau? Quelle?
+  \end{itemize}
+\end{itemize}
+
+
+
+\subsection*{Nutzung KI-basierter Tools}
+
+  Ich denke anhand der plausiblen Quellenangaben der Arbeit und Prüfung mittels
+  eines Tools zur Erkennung von KI-generierten Texten, dass in dieser Arbeit
+  keine KI-Tools verwendet wurden.  
+
+\section*{Sachliche Korrektheit}
+
+  Die verwendeten Quellen sind plausibel, allerdings könnte die ein oder andere
+  Aussage mit zusätzlichen Quellen belegt werden. Siehe dazu z.B. den Punkt
+  Zukunftsausblick in den Schwächen der Arbeit.
+
+\section*{Äußere Form}
+\begin{itemize}
+  \item Die Rechtschreibung und Grammatik ist insgesamt gut. Jedoch könnte man
+  ein paar Kleinigkeiten verbessern.
+  \begin{itemize}
+   \item z.B. könnte man in der Zusammenfassung bei compilerbasierten statischen
+    Codeanalyse einen Bindestrich einfügen, um konsistent zum englischen Titel
+    zu sein. 
+    \item Bei der Quellenangabe des Codebeispiels auf Seite 3 passt die
+  Formatierung der Quellenangabe nicht ganz (Klammerfehler)
+  \end{itemize}
+  \item Die Kapiteleinteilung ist sinnvoll und nachvollziehbar. Das
+  Grundlagenkapitel könnte jedoch im Weitern Verlauf der Arbeit weiter
+  aufgegriffen werden. Dazu könnte man z.B. zeigen, wie die Datenflussanalyse und
+  Kontrollflussanalyse in den Tools verwendet werden.
+  \item Es wird eine angemessene Anzahl an Abbildungen verwendet, welche korrekt
+  beschriftet sind und im Fließtext referenziert werden.
+  \item Meiner Meinung nach sind die Zeilenumbrüche etwas zu weit auseinander.
+\end{itemize}
+\end{document}
