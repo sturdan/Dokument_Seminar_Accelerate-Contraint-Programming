@@ -151,14 +151,39 @@ mit dem Branch-and-Bound-Algorithmus lösen \cite{dakin65jo}
 
 Oft lassen sich Probleme jedoch nur über nichtlineare Zusammenhänge beschreiben.
 Eine Möglichkeit, solche Probleme zu lösen, ist die Verwendung von
-Gradientenverfahren \cite[153]{marti21bo}. Ein Problem bei der Verwendung dieser
-ist jedoch, dass sie je nach Initialisierung oft nur lokale Minima finden
-\cite[9]{boyd04bo}. Ein Ansatz, um dieses Problem zu umgehen, ist die Verwendung
-von konvexen Funktionen. Dabei wird die nichtlineare Funktion durch eine konkave
-Zielfunktion approximiert \cite[11]{boyd04bo}. Dies ist von Vorteil, da konvexe
-Funktionen nur ein lokales Minimum haben \cite[7]{noced06bo}. Durch die
-einfachere Lösbarkeit von konvexen Optimierungsproblemen spielen sie auch in der
-Literatur eine wichtige Rolle \cite[8]{boyd04bo}.
+Gradientenverfahren \cite[153]{marti21bo}. Ein einfaches Gradientenverfahren zur
+minimierung von Zielfunktionen ohne Nebenbedingungen ist "gradient descent"
+\cite[110]{marti21bo}. Die Idee dahinter ist es, den Gradienten, die Richtung
+des steilsten Anstiegs, der Zielfunktion zu berechnen und sich je nachdem ob die
+Funktion maximiert oder minimiert werden soll, in die entgegengesetzte oder
+gleiche Richtung zu bewegen. Dies wird solange wiederholt, bis ein Minimum
+gefunden wurde. Eine Herausvorderung hierbei ist die Wahl der Schrittweite. In
+\ref*{fig:gradient} ist beispielshaft ein Gradientenverfahren welches in 32
+Schritten terminiert dargestellt. Ein weiteres Problem bei der Verwendung dieser
+Verfahren ist auch, dass sie je nach Initialisierung oft nur lokale Minima
+finden \cite[9]{boyd04bo}. Ein Ansatz, um dieses Problem zu umgehen, ist die
+Verwendung von konvexen Funktionen. Dabei wird die nichtlineare Funktion durch
+eine konkave Zielfunktion approximiert \cite[11]{boyd04bo}. Dies ist von
+Vorteil, da konvexe Funktionen nur ein lokales Minimum haben
+\cite[7]{noced06bo}. Durch die einfachere Lösbarkeit von konvexen
+Optimierungsproblemen spielen sie auch in der Literatur eine wichtige Rolle
+\cite[8]{boyd04bo}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.3\textwidth]{figures/[marti21bo Gradient].png}
+    \caption{Beispiel eines Gradientenverfahren, welchses die Zielfunktion \\
+    $f(x_1,x_2)=x_1^2+\beta x_2^2$ minimiert  \cite[112]{marti21bo}}
+    \label{fig:gradient}
+\end{figure}
+
+Um auch nichtlineare Probleme mit Nebenbedingungen zu lösen gibt es verschiedene
+Ansätze welche auf den oben beschriebenen Verfahren aufbauen. Ein Ansatz hierzu
+sind beispielweise Penalty-Methoden. Hierbei wird die Zielfunktion um einen Strafterm $\pi(x)$
+erweitert, wenn die Nebenbedingungen verletzt werden. Optimiert wird dann die
+um den Strafterm erweiterte Zielfunktion $\hat{f}(x)=f(x)+\mu\pi(x)$.
+\cite[175]{marti21bo}
+
 
 
 \section{Recent Approaches To Accelerate Constraint Programs}
