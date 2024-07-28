@@ -23,7 +23,7 @@ findet die Conference on Principles and Practice of Constraint Programming
 statt, in der aktuelle Forschungsergebnisse im Bereich CP diskutiert werden, was
 die Wichtigkeit des Themenfeldes unterstreicht \cite{CP20we}. Neben dem
 klassischen Problem der Kursplanung \cite{duboi96jo} in einer sich ständig
-beschleunigenden Zeit gibt es auch in der Industrie eine Vielzahl von
+beschleunigenden Zeit, gibt es auch in der Industrie eine Vielzahl von
 Scheduling-Problemen, wie die Zuweisung von Aufträgen zu Maschinen
 \cite{gedik16jo}. Auch wurden CP-Ansätze für die Konfiguration von Netzwerken
 verwendet \cite{ardisjo}. Ein weit verbreitetes kombinatorisches
@@ -100,7 +100,7 @@ Möglichkeit, ein CSP zu lösen, ist die Verwendung von Backtracking. Hierbei wi
 eine Variable nach der anderen belegt, und bei einem Widerspruch wird ein
 Schritt zurückgegangen und eine andere Variable belegt \cite[85]{rossi06bo}.
 Interessant ist auch, dass sich auch alle \(k>3\)-SAT-Probleme auf ein
-3-SAT-Problem reduzieren lassen, wodurch auch das \(k>3\) SAT-Problem
+3-SAT-Problem reduzieren lassen, wodurch auch das \(k>3\)-SAT-Problem
 NP-vollständig ist \cite[206]{gritz13bo}. \mbox{K-SAT} Klauseln lassen sich nach
 folgendem Schema durch Einführung einer Hilfsvariable in \mbox{K-1-SAT} Klauseln
 herunterbrechen: $x_1 \vee x_2 \vee x_3 \vee x_4$ ist äquivalent zu $(x_1 \vee
@@ -151,7 +151,7 @@ mit dem Branch-and-Bound-Algorithmus lösen \cite{dakin65jo}
     \includegraphics[width=0.5\textwidth]{figures/Simplex.PNG}
     \caption{Der Polyeder beschreibt die Nebenbedingungen, gestrichelte Linie
     die Zielfunktion, Ecken sind mögliche Lösungen \cite[100]{hofst07bo}}
-    \label{fig:bild}
+    \label{fig:Simplex}
 \end{figure}
 
 Oft lassen sich Probleme jedoch nur über nichtlineare Zusammenhänge beschreiben.
@@ -163,12 +163,12 @@ des steilsten Anstiegs, der Zielfunktion zu berechnen und sich je nachdem ob die
 Funktion maximiert oder minimiert werden soll, in die entgegengesetzte oder
 gleiche Richtung zu bewegen. Dies wird so lange wiederholt, bis ein Minimum
 gefunden wurde. Eine Herausforderung hierbei ist die Wahl der Schrittweite. In
-\ref*{fig:gradient} ist beispielhaft  ein Gradientenverfahren welches in 32
-Schritten terminiert dargestellt. Ein weiteres Problem bei der Verwendung dieser
-Verfahren ist auch, dass sie je nach Initialisierung oft nur lokale Minima
-finden \cite[9]{boyd04bo}. Ein Ansatz, um dieses Problem zu umgehen, ist die
-Verwendung von konvexen Funktionen. Dabei wird die nichtlineare Funktion durch
-eine konkave Zielfunktion approximiert \cite[11]{boyd04bo}. Dies ist von
+\ref*{fig:gradient} ist beispielhaft  ein Gradientenverfahren, welches in 32
+Schritten terminiert, dargestellt. Ein weiteres Problem bei der Verwendung
+dieser Verfahren ist auch, dass sie je nach Initialisierung oft nur lokale
+Minima finden \cite[9]{boyd04bo}. Ein Ansatz, um dieses Problem zu umgehen, ist
+die Verwendung von konvexen Funktionen. Dabei wird die nichtlineare Funktion
+durch eine konkave Zielfunktion approximiert \cite[11]{boyd04bo}. Dies ist von
 Vorteil, da konvexe Funktionen nur ein lokales Minimum haben
 \cite[7]{noced06bo}. Durch die einfachere Lösbarkeit von konvexen
 Optimierungsproblemen spielen sie auch in der Literatur eine wichtige Rolle
@@ -206,8 +206,8 @@ die Performance zu steigern.
 Ein Beispiel eines Solvers, welcher in vielen SAT-Portfolio-Ansätzen verwendet
 wird, ist der MiniSat Solver \cite{een04bo}. Dieser basiert im Wesentlichen auf
 dem Davis-Putnam-Logemann-Loveland-Algorithmus (DPLL) \cite{davis62jo}, einer
-speziellen Form des Backtracking-Algorithmus
-\ref{sec:Constraint-Satisfaction-Probleme}, der um Unit Propagation erweitert
+speziellen Form des Backtracking-Algorithmus (siehe Kapitel
+\ref{sec:Constraint-Satisfaction-Probleme}), der um Unit Propagation erweitert
 wurde. Unit Propagation beschreibt das Belegen einer Variable, wenn sie in einer
 Klausel als einzige Variable noch unbelegt ist \cite*[S.89]{rossi06bo}. Außerdem
 verwendet MiniSat weitere Techniken, um die Performance zu steigern. Dazu zählen
@@ -248,7 +248,7 @@ Entscheidungsbäume, Support Vector Machines sowie Neuronale Netze verwendet.
     \includegraphics[width=0.5\textwidth]{figures/Neuronal Nework to choose Solver [popes22jo].PNG}
     \caption{Verwendung eines Neuronalen Netzes zur Wahl eines Solvers
     \cite[105]{popes22jo}}
-    \label{fig:bild}
+    \label{fig:NeuronalNework}
 \end{figure}
 
 Bei den Learning Ansätzen besteht jedoch das Problem, dass ein großer
@@ -275,7 +275,7 @@ dann für die Optimierung verwendet. Auf diesem wird solange gearbeitet, bis ein
 bestimmtes Budget, beispielsweise Schritte oder ein Delta-Wert, erreicht wird.
 Mit diesem wird dann durch Auswertung der Blackbox das Ergebnis bestimmt,
 welches entweder verwendet wird, um das Modell zu verfeinern, oder es wird als
-Endresultat ausgegeben \cite[4]{bisch18pr}.
+Endresultat ausgegeben \cite[4]{bisch18pr}. 
 
 
 \subsection{Automated Parameter Tuning}
@@ -307,21 +307,29 @@ an \cite[31-38]{kotth23pr}.
     \label{fig:bild}
 \end{figure}
 
+
 Die Suche nach den optimalen Parametern kann entweder durch Grid Search oder
-durch Random Search erfolgen. Bei der Grid Search werden die Parameter
-systematisch abgedeckt. Bei der Random Search werden die Parameter zufällig
-ausgewählt. Grid Search ist oft ineffizient, da eine große Anzahl von
-unwichtigen Parameterkombinationen getestet werden. Dafür ist es aber
-unwahrscheinlich, dass ein relevanter Bereich ausgelassen wird. Random Search
-testet hingegen relevante Parameterkombinationen, jedoch auf zufällige Weise.
-Dafür arbeitet Grid Search oft schneller, da mehr relevante
-Parameterkombinationen getestet werden \cite[39]{kotth23pr}.
+durch Random Search erfolgen. Bei Grid Search werden die Parameter systematisch
+abgedeckt, während bei der Random Search die Parameter zufällig ausgewählt
+werden. Grid Search ist oft ineffizient, da eine große Anzahl von unwichtigen
+Parameterkombinationen getestet wird. Dafür ist es jedoch unwahrscheinlich, dass
+ein relevanter Bereich ausgelassen wird. Random Search testet hingegen relevante
+Parameterkombinationen zufällig, was die Effizienz deutlich erhöht. Diese
+Aussage basiert auf der Annahme, dass die effektive Dimension des Problems
+niedrig ist, d. h. dass nur wenige Parameter einen relevanten Einfluss auf den
+Algorithmus haben. Dieser Sachverhalt ist in Abbildung
+\ref{fig:GridRandomSearch} dargestellt. Bei der Grid Search werden wichtige
+Parameter fixiert und unwichtige variiert, was dazu führt, dass viele unwichtige
+Parameterkombinationen getestet werden. Random Search hingegen variiert
+gleichzeitig alle Parameter, inklusive der wichtigen, was zu einer deutlich
+effizienteren Suche unter der Annahme einer niedrigen effektiven Dimension führt
+\cite[284]{bergsjo}.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.5\textwidth]{figures/Grid Search vs. Random Search [kotth23pr].PNG}
-    \caption{Grid Search und Random Search \cite[39]{kotth23pr}}
-    \label{fig:bild}
+    \caption{Grid Search und Random Search \cite[284]{bergsjo}}
+    \label{fig:GridRandomSearch}
 \end{figure}
 
 Ein weiterer Ansatz ist Local Search, bei dem ein einzelner Parameter iterativ
@@ -344,7 +352,7 @@ gelöst werden. Wenn es bei der Lösung eines SAT-Problems zu einem Konflikt
 kommt, wird eine Klausel dem Solver hinzugefügt. Durch diese Kombination werden
 die Stärken von CP (z. B. feinkörnige Domänenreduktion) und SAT (z. B.
 leistungsstarke Konfliktlösung und Backtracking) optimal genutzt, was zu einem
-effizienteren und leistungsfähigeren Solver führt \cite[5]{goosjo}. Ein Beispiel
+effizienteren und leistungsfähigeren Solver führt \cite{stuck10bo}. Ein Beispiel
 für einen Solver, der diese Methode verwendet, ist der Chuffed Solver
 \cite{Chuff24co}.
 
