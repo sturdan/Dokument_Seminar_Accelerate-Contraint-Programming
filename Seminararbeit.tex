@@ -46,7 +46,7 @@ Logistikbranche und dem flexiblen Transport von großer Bedeutung
 unterschiedliche Constraint Programming Ansätze verwendet werden. Es existieren
 verschiedene Toolsets, um Constraint Programming-Probleme zu lösen. Für das
 Vehicle Routing Problem, welches das Problem beschreibt, den kürzesten Gesamtweg
-für \( n \) Fahrzeuge und \( m \) Orte zu finden \cite[222]{labor18jo}, kann
+für \( m \) Fahrzeuge und \( n \) Orte zu finden \cite[222]{labor18jo}, kann
 beispielsweise der IBM ILOG CP Optimizer verwendet werden \cite{IBMIwe}. Je nach
 Problemstellung gibt es eine Vielzahl weiterer Toolsets \cite{Solviwea}.
 OR-tools von Google ist eine weitere Möglichkeit zur Lösung von Constraint
@@ -101,12 +101,12 @@ eine Variable nach der anderen belegt, und bei einem Widerspruch wird ein
 Schritt zurückgegangen und eine andere Variable belegt \cite[85]{rossi06bo}.
 Interessant ist auch, dass sich auch alle \(k>3\)-SAT-Probleme auf ein
 3-SAT-Problem reduzieren lassen, wodurch auch das \(k>3\) SAT-Problem
-NP-vollständig ist \cite[206]{gritz13bo}. \mbox{K-SAT} Klauseln lassen sich
-nach folgendem Schema durch Einführung einer Hilfsvariable in
-\mbox{K-1-SAT} Klauseln herunterbrechen: $x_1 \vee x_2 \vee x_3 \vee
-x_4$ ist äquivalent zu $(x_1 \vee x_2 \vee y) \wedge (\lnot y \vee x_3 \vee
-x_4)$ .Sind die Domänen der Variablen auf boolesche Werte beschränkt, handelt es
-sich um ein Boolean Satisfiability Problem (SAT).
+NP-vollständig ist \cite[206]{gritz13bo}. \mbox{K-SAT} Klauseln lassen sich nach
+folgendem Schema durch Einführung einer Hilfsvariable in \mbox{K-1-SAT} Klauseln
+herunterbrechen: $x_1 \vee x_2 \vee x_3 \vee x_4$ ist äquivalent zu $(x_1 \vee
+x_2 \vee y) \wedge (\lnot y \vee x_3 \vee x_4)$ .Sind die Domänen der Variablen
+auf boolesche Werte beschränkt, handelt es sich um ein Boolean Satisfiability
+Problem (SAT).
 
 
 \subsection{Constraint Optimization Probleme}
@@ -157,13 +157,13 @@ mit dem Branch-and-Bound-Algorithmus lösen \cite{dakin65jo}
 Oft lassen sich Probleme jedoch nur über nichtlineare Zusammenhänge beschreiben.
 Eine Möglichkeit, solche Probleme zu lösen, ist die Verwendung von
 Gradientenverfahren \cite[153]{marti21bo}. Ein einfaches Gradientenverfahren zur
-minimierung von Zielfunktionen ohne Nebenbedingungen ist "gradient descent"
+Minimierung von Zielfunktionen ohne Nebenbedingungen ist "gradient descent"
 \cite[110]{marti21bo}. Die Idee dahinter ist es, den Gradienten, die Richtung
 des steilsten Anstiegs, der Zielfunktion zu berechnen und sich je nachdem ob die
 Funktion maximiert oder minimiert werden soll, in die entgegengesetzte oder
-gleiche Richtung zu bewegen. Dies wird solange wiederholt, bis ein Minimum
-gefunden wurde. Eine Herausvorderung hierbei ist die Wahl der Schrittweite. In
-\ref*{fig:gradient} ist beispielshaft ein Gradientenverfahren welches in 32
+gleiche Richtung zu bewegen. Dies wird so lange wiederholt, bis ein Minimum
+gefunden wurde. Eine Herausforderung hierbei ist die Wahl der Schrittweite. In
+\ref*{fig:gradient} ist beispielhaft  ein Gradientenverfahren welches in 32
 Schritten terminiert dargestellt. Ein weiteres Problem bei der Verwendung dieser
 Verfahren ist auch, dass sie je nach Initialisierung oft nur lokale Minima
 finden \cite[9]{boyd04bo}. Ein Ansatz, um dieses Problem zu umgehen, ist die
@@ -182,12 +182,12 @@ Optimierungsproblemen spielen sie auch in der Literatur eine wichtige Rolle
     \label{fig:gradient}
 \end{figure}
 
-Um auch nichtlineare Probleme mit Nebenbedingungen zu lösen gibt es verschiedene
-Ansätze welche auf den oben beschriebenen Verfahren aufbauen. Ein Ansatz hierzu
-sind beispielweise Penalty-Methoden. Hierbei wird die Zielfunktion um einen
-Strafterm $\pi(x)$ erweitert, wenn die Nebenbedingungen verletzt werden.
-Optimiert wird dann die um den Strafterm erweiterte Zielfunktion
-$\hat{f}(x)=f(x)+\mu\pi(x)$.
+Um auch nichtlineare Probleme mit Nebenbedingungen zu lösen, gibt es
+verschiedene Ansätze welche auf den oben beschriebenen Verfahren aufbauen. Ein
+Ansatz hierzu sind beispielsweise  Penalty-Methoden. Hierbei wird die
+Zielfunktion um einen Strafterm $\pi(x)$ erweitert, wenn die Nebenbedingungen
+verletzt werden. Optimiert wird dann die um den Strafterm erweiterte
+Zielfunktion $\hat{f}(x)=f(x)+\mu\pi(x)$.
 \cite[175]{marti21bo}
 
 
@@ -203,27 +203,27 @@ Die Idee hinter Portfolio Ansätzen ist es, mehrere Solver zu kombinieren, um so
 die Performance zu steigern. 
 
 
-Ein Beispiel eines Sovers welcher in vielen SAT Portfolio Ansätzen verwendet
-wird, ist der MiniSat Solver \cite*{een04bo}. Diser basiert im Wesentlichen auf
-dem Davis-Putnam-Logemann-Loveland-Algorithmus (DPLL) \cite*{davis62jo}, einer
+Ein Beispiel eines Solvers, welcher in vielen SAT-Portfolio-Ansätzen verwendet
+wird, ist der MiniSat Solver \cite{een04bo}. Dieser basiert im Wesentlichen auf
+dem Davis-Putnam-Logemann-Loveland-Algorithmus (DPLL) \cite{davis62jo}, einer
 speziellen Form des Backtracking-Algorithmus
 \ref{sec:Constraint-Satisfaction-Probleme}, der um Unit Propagation erweitert
 wurde. Unit Propagation beschreibt das Belegen einer Variable, wenn sie in einer
-Klausel als einzige Variable noch unbelegt ist. \cite*[S.89]{rossi06bo}.
-Außerdem verwendet MiniSat weitere Technniken um die Performance zu steigern.
-Dazu zählen zum Beispiel effiziente Datenstrukturen. Beispielsweise wird für
-jede Variable eine Liste von Klauseln geführt, in denen sie vorkommt. Dadurch
-können Unit Propagations schneller durchgeführt werden, sobald diese belegt ist,
-da nur über relevante Klauseln iteriert werden muss. Um die Iteration weiter
-einzuschränken wird eine Watched-Literal Liste geführt, in der für jeder Klausel
-zwei repräsentative unbelegete Literale geführt werden. Dadurch kann schneller
-erkannt werden, ob die Belegegung einer Variable zu einer Unit Propagation
-führt. \cite[505]{een04bo} Des weiteren wird eine Dynamic Variable Ordering
-verwendet, bei der die Literale nach ihrer Aktivität in kürzlichen Konflikten
-geordnet werden. Bei der Auswahl des nächsten Literals wird dann das aktivste,
-mögliche Literal gewählt um die Suche auf erfolgversprechende Pfade zu lenken.
-Diese Arte der Suche wird oft als Variable State Independent Decaying Sum
-(VSIDS) Heuristik bezeichnet. \cite[506f]{een04bo}
+Klausel als einzige Variable noch unbelegt ist \cite*[S.89]{rossi06bo}. Außerdem
+verwendet MiniSat weitere Techniken, um die Performance zu steigern. Dazu zählen
+zum Beispiel effiziente Datenstrukturen. Beispielsweise wird für jede Variable
+eine Liste von Klauseln geführt, in denen sie vorkommt. Dadurch können Unit
+Propagations schneller durchgeführt werden, sobald diese belegt ist, da nur über
+relevante Klauseln iteriert werden muss. Um die Iteration weiter einzuschränken,
+wird eine Watched-Literal-Liste geführt, in der für jede Klausel zwei
+repräsentative unbelegte Literale geführt werden. Dadurch kann schneller erkannt
+werden, ob die Belegung einer Variable zu einer Unit Propagation führt
+\cite[505]{een04bo}. Des Weiteren wird ein Dynamic Variable Ordering verwendet,
+bei dem die Literale nach ihrer Aktivität in kürzlichen Konflikten geordnet
+werden. Bei der Auswahl des nächsten Literals wird dann das aktivste mögliche
+Literal gewählt, um die Suche auf erfolgversprechende Pfade zu lenken. Diese Art
+der Suche wird oft als Variable State Independent Decaying Sum (VSIDS) Heuristik
+bezeichnet \cite[506f]{een04bo}.
 
 
 
