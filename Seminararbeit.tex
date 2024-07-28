@@ -1,3 +1,5 @@
+% !TeX root = Seminararbeit.tex
+
 \input{preamble}
 
 \begin{document}
@@ -51,13 +53,13 @@ OR-tools von Google ist eine weitere Möglichkeit zur Lösung von Constraint
 Programming (CP), Linear Programming (LP), Integer Programming (IP) und Boolean
 Satisfiability (SAT) Problemen \cite{ORToowe}. Geocode ist eine
 Open-Source-Variante basierend auf C++ \cite{GECODwe}, und Chuffed ist eine
-Variante, die "lazy clause generation" ausnutzt, um CP-Probleme schneller zu
-lösen \cite{Chuff24co}. MiniZinc vereint unter anderem die zuvor beschriebenen
-Softwarebibliotheken zu einer Ausdruckssprache zum Lösen einer Vielzahl von LP,
-Transportproblemen (TP) und SAT-Problemen \cite{MiniZwe}. Unter demselben Namen
-wird jährlich die MiniZinc Challenge ausgetragen, in der ein Parcours von
-Constraint-Modellen gelöst werden muss. Am Ende werden die Solver nach Anzahl
-der gelösten Modelle, der Zeit und der Qualität der Lösung bewertet
+Variante, die \grqq lazy clause generation\grqq\ ausnutzt, um CP-Probleme
+schneller zu lösen \cite{Chuff24co}. MiniZinc vereint unter anderem die zuvor
+beschriebenen Softwarebibliotheken zu einer Ausdruckssprache zum Lösen einer
+Vielzahl von LP, Transportproblemen (TP) und SAT-Problemen \cite{MiniZwe}. Unter
+demselben Namen wird jährlich die MiniZinc Challenge ausgetragen, in der ein
+Parcours von Constraint-Modellen gelöst werden muss. Am Ende werden die Solver
+nach Anzahl der gelösten Modelle, der Zeit und der Qualität der Lösung bewertet
 \cite{Homewe}. Gerade bei großen Problemstellungen, oder wenn, wie in der
 Forschung oft üblich, mehrere Lösungen benötigt werden oder besondere Ansprüche
 an die Qualität und Genauigkeit der Lösung gestellt werden, kann die Ausführung
@@ -96,12 +98,15 @@ NP-vollständig, was bedeutet, dass es keinen effizienten Algorithmus gibt, der
 das Problem in Polynomialzeit lösen kann \cite[17]{rossi06bo}. Eine einfache
 Möglichkeit, ein CSP zu lösen, ist die Verwendung von Backtracking. Hierbei wird
 eine Variable nach der anderen belegt, und bei einem Widerspruch wird ein
-Schritt zurückgegangen und eine andere Variable belegt \cite[21]{rossi06bo}.
+Schritt zurückgegangen und eine andere Variable belegt \cite[85]{rossi06bo}.
 Interessant ist auch, dass sich auch alle \(k>3\)-SAT-Probleme auf ein
 3-SAT-Problem reduzieren lassen, wodurch auch das \(k>3\) SAT-Problem
-NP-vollständig ist \cite[206]{gritz13bo}. Sind die Domänen der Variablen auf
-boolesche Werte beschränkt, handelt es sich um ein Boolean Satisfiability
-Problem (SAT).
+NP-vollständig ist \cite[206]{gritz13bo}. \mbox{K-SAT} Klauseln lassen sich
+nach folgendem Schema durch Einführung einer Hilfsvariable in
+\mbox{K-1-SAT} Klauseln herunterbrechen: $x_1 \vee x_2 \vee x_3 \vee
+x_4$ ist äquivalent zu $(x_1 \vee x_2 \vee y) \wedge (\lnot y \vee x_3 \vee
+x_4)$ .Sind die Domänen der Variablen auf boolesche Werte beschränkt, handelt es
+sich um ein Boolean Satisfiability Problem (SAT).
 
 
 \subsection{Constraint Optimization Probleme}
@@ -179,9 +184,10 @@ Optimierungsproblemen spielen sie auch in der Literatur eine wichtige Rolle
 
 Um auch nichtlineare Probleme mit Nebenbedingungen zu lösen gibt es verschiedene
 Ansätze welche auf den oben beschriebenen Verfahren aufbauen. Ein Ansatz hierzu
-sind beispielweise Penalty-Methoden. Hierbei wird die Zielfunktion um einen Strafterm $\pi(x)$
-erweitert, wenn die Nebenbedingungen verletzt werden. Optimiert wird dann die
-um den Strafterm erweiterte Zielfunktion $\hat{f}(x)=f(x)+\mu\pi(x)$.
+sind beispielweise Penalty-Methoden. Hierbei wird die Zielfunktion um einen
+Strafterm $\pi(x)$ erweitert, wenn die Nebenbedingungen verletzt werden.
+Optimiert wird dann die um den Strafterm erweiterte Zielfunktion
+$\hat{f}(x)=f(x)+\mu\pi(x)$.
 \cite[175]{marti21bo}
 
 
@@ -194,17 +200,44 @@ um den Strafterm erweiterte Zielfunktion $\hat{f}(x)=f(x)+\mu\pi(x)$.
 \label{sec:Portfolio-Ansätze}
 
 Die Idee hinter Portfolio Ansätzen ist es, mehrere Solver zu kombinieren, um so
-die Performance zu steigern. Es gibt verschiedene Ansätze, wie die Solver dabei
-kombiniert werden können. Zum einen besteht die Möglichkeit, die Solver statisch
-festzulegen, als auch dynamisch zu wählen. Weiter besteht die Möglichkeit des
-Automatischen Parameter-Tunings, bei dem die Parameter der Solver automatisch an
-das Problem angepasst werden \cite[8-11]{kotth12jo}. Eine weitere Fragestellung
-ist die Wahl der Solver und wann dieser eingesetzt werden soll. Der am weitesten
-verbreitete Ansatz ist, einen einzelnen Solver zu Beginn der Laufzeit zu wählen
-und für das ganze Problem zu verwenden. Es gibt jedoch auch Ansätze, die den
-Solver zur Laufzeit wechseln oder auch mehrere Solver aus dem Portfolio
-gleichzeitig verwenden \cite[11-14]{kotth12jo}. Das Hauptproblem besteht jedoch
-in der richtigen Wahl des Solvers. Während in den Anfängen die Algorithmen nach
+die Performance zu steigern. 
+
+
+Ein Beispiel eines Sovers welcher in vielen SAT Portfolio Ansätzen verwendet
+wird, ist der MiniSat Solver \cite*{een04bo}. Diser basiert im Wesentlichen auf
+dem Davis-Putnam-Logemann-Loveland-Algorithmus (DPLL) \cite*{davis62jo}, einer
+speziellen Form des Backtracking-Algorithmus
+\ref{sec:Constraint-Satisfaction-Probleme}, der um Unit Propagation erweitert
+wurde. Unit Propagation beschreibt das Belegen einer Variable, wenn sie in einer
+Klausel als einzige Variable noch unbelegt ist. \cite*[S.89]{rossi06bo}.
+Außerdem verwendet MiniSat weitere Technniken um die Performance zu steigern.
+Dazu zählen zum Beispiel effiziente Datenstrukturen. Beispielsweise wird für
+jede Variable eine Liste von Klauseln geführt, in denen sie vorkommt. Dadurch
+können Unit Propagations schneller durchgeführt werden, sobald diese belegt ist,
+da nur über relevante Klauseln iteriert werden muss. Um die Iteration weiter
+einzuschränken wird eine Watched-Literal Liste geführt, in der für jeder Klausel
+zwei repräsentative unbelegete Literale geführt werden. Dadurch kann schneller
+erkannt werden, ob die Belegegung einer Variable zu einer Unit Propagation
+führt. \cite[505]{een04bo} Des weiteren wird eine Dynamic Variable Ordering
+verwendet, bei der die Literale nach ihrer Aktivität in kürzlichen Konflikten
+geordnet werden. Bei der Auswahl des nächsten Literals wird dann das aktivste,
+mögliche Literal gewählt um die Suche auf erfolgversprechende Pfade zu lenken.
+Diese Arte der Suche wird oft als Variable State Independent Decaying Sum
+(VSIDS) Heuristik bezeichnet. \cite[506f]{een04bo}
+
+
+
+Es gibt verschiedene Ansätze, wie die Solver dabei kombiniert werden können. Zum
+einen besteht die Möglichkeit, die Solver statisch festzulegen, als auch
+dynamisch zu wählen. Weiter besteht die Möglichkeit des Automatischen
+Parameter-Tunings, bei dem die Parameter der Solver automatisch an das Problem
+angepasst werden \cite[8-11]{kotth12jo}. Eine weitere Fragestellung ist die Wahl
+der Solver und wann dieser eingesetzt werden soll. Der am weitesten verbreitete
+Ansatz ist, einen einzelnen Solver zu Beginn der Laufzeit zu wählen und für das
+ganze Problem zu verwenden. Es gibt jedoch auch Ansätze, die den Solver zur
+Laufzeit wechseln oder auch mehrere Solver aus dem Portfolio gleichzeitig
+verwenden \cite[11-14]{kotth12jo}. Das Hauptproblem besteht jedoch in der
+richtigen Wahl des Solvers. Während in den Anfängen die Algorithmen nach
 handgewählten Kriterien ausgewählt wurden, werden heute oft automatische Ansätze
 verwendet. Dazu zählen Lazy Approaches, wie das Abspeichern von Fallbeispielen
 oder Nearest-Neighbor Ansätze. Auch wurden schon Klassifikationen,
@@ -323,7 +356,7 @@ für einen Solver, der diese Methode verwendet, ist der Chuffed Solver
 
 \section{Schluss}
 \label{sec:Schluss}
-DDie vorgestellten Ansätze zur Beschleunigung von Constraint Programming (CP)
+Die vorgestellten Ansätze zur Beschleunigung von Constraint Programming (CP)
 bieten vielfältige Möglichkeiten, die Leistungsfähigkeit von CP-Systemen zu
 verbessern und damit die Lösung komplexer Probleme effizienter zu gestalten.
 
